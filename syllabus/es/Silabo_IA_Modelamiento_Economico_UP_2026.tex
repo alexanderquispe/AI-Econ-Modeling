@@ -1,0 +1,402 @@
+\documentclass[11pt]{article}
+
+% ---- Encoding & language ----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+
+% ---- Layout ----
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% ---- Tables ----
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xltabular}  % tabularx que puede partirse entre p\'aginas (cronograma)
+\usepackage{array}
+\renewcommand{\arraystretch}{1.25}
+
+% ---- Lists ----
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.4em}
+
+% ---- Sections & links ----
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Title ----
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries S\'ILABO 2026-II}\\[0.4em]
+{\large Inteligencia Artificial y Modelamiento Econ\'omico}\\[0.2em]
+{\normalsize Universidad del Pac\'ifico --- Facultad de Econom\'ia}
+\end{center}
+
+\vspace{0.6em}
+
+%================================================================
+\section{Informaci\'on General}
+
+\begin{tabular}{@{}p{4.2cm}p{11cm}@{}}
+\textbf{Nombre del curso} & Inteligencia Artificial y Modelamiento Econ\'omico \\
+\textbf{Semestre} & 2026-II (10 de agosto al 21 de noviembre de 2026) \\
+\textbf{Profesor del curso} & Alexander Quispe Rojas \\
+\textbf{Email} & \href{mailto:aw.quispero@up.edu.pe}{aw.quispero@up.edu.pe}, \href{mailto:alexander.quispe@pucp.edu.pe}{alexander.quispe@pucp.edu.pe} \\
+\textbf{Pr\'acticas} & A cargo del profesor del curso \\
+\textbf{Sesiones} & Mi\'ercoles y viernes, 2 horas cada una \\
+\textbf{Modalidad} & Virtual, por Zoom \\
+\textbf{Horas Teor\'ia} & 2 Horas (lectura y discusi\'on de \emph{paper}) \\
+\textbf{Horas Pr\'actica} & 2 Horas (taller y presentaciones) \\
+\textbf{Asesor\'ia} & \url{https://calendly.com/alexander-quispe} \\
+\textbf{Prerrequisitos} & Microeconom\'ia (consumidor/productor), C\'alculo y optimizaci\'on, Probabilidad y Estad\'istica, Econometr\'ia \\
+\end{tabular}
+
+%================================================================
+\section{Sumilla}
+
+Este curso introduce a las y los estudiantes al \textbf{modelamiento matem\'atico formal de la interacci\'on entre seres humanos e inteligencia artificial}, a partir de la lectura cr\'itica de art\'iculos de teor\'ia econ\'omica recientes. En lugar de aprender herramientas de programaci\'on de forma aislada, las y los participantes aprenden a \emph{leer, reproducir y extender} modelos econ\'omicos: identificar el mecanismo central de un \emph{paper}, rederivar su resultado principal y relajar uno de sus supuestos para obtener un resultado nuevo. El curso aprovecha de manera expl\'icita los \textbf{modelos de lenguaje de gran tama\~no (LLMs)} ---GPT, Claude, Gemini--- no como tema de estudio, sino como \textbf{asistentes de demostraci\'on}: herramientas que ayudan a derivar, auditar y verificar pasos matem\'aticos, siempre bajo el juicio cr\'itico del estudiante. El hilo conductor es una familia de modelos que formalizan c\'omo la asistencia de IA afecta la habilidad, el esfuerzo y la productividad humanas. El curso culmina en un \textbf{trabajo propio}: una extensi\'on formal de uno de los art\'iculos le\'idos, o el modelo econ\'omico que sostiene la tesis de cada estudiante.
+
+%================================================================
+\section{Presentaci\'on}
+
+El prop\'osito de este curso es desarrollar en las y los estudiantes la capacidad de \textbf{trabajar con modelos econ\'omicos formales como objetos vivos}: no solo entenderlos, sino intervenirlos. Partiremos de una pregunta concreta y actual ---\,?`c\'omo cambia la inteligencia artificial lo que un trabajador humano puede y decide hacer?\,--- y la abordaremos a trav\'es de los art\'iculos te\'oricos que la est\'an formalizando en este momento en econom\'ia, investigaci\'on de operaciones y ciencias de la computaci\'on.
+
+\textbf{El curso no tiene sesiones de repaso ni bloques separados de matem\'aticas.} Cada sesi\'on se dedica \'integramente a un art\'iculo, y la secuencia est\'a ordenada por \textbf{dificultad matem\'atica creciente}: cada sesi\'on introduce exactamente la t\'ecnica que ese art\'iculo necesita, y ninguna exige una herramienta que no se haya usado antes. Se empieza con un modelo cuya proposici\'on principal se demuestra por un caso interior-vs-esquina, sin c\'alculo, y se termina con modelos de asignaci\'on y de tareas en equilibrio general.
+
+Los doce art\'iculos que presenta el profesor concluyen \textbf{antes de los ex\'amenes parciales}. El resto del semestre pertenece a las y los estudiantes: primero exponen el tema y la extensi\'on que proponen, y despu\'es presentan su trabajo. La evaluaci\'on no se basa en ex\'amenes escritos sino en un proceso de investigaci\'on escalonado. El curso es la contraparte te\'orico-formal del curso de Machine Learning Causal: aquel aborda el lado emp\'irico; este, el lado del modelo. Al finalizar, las y los participantes habr\'an producido una pieza original de modelamiento econ\'omico y habr\'an aprendido a usar la IA como colaborador anal\'itico sin ceder su soberan\'ia intelectual.
+
+%================================================================
+\section{Justificaci\'on y Pertinencia}
+
+\textbf{El problema: una brecha de modelamiento en la formaci\'on del economista.}
+La secuencia actual de la carrera forma s\'olidamente a las y los estudiantes en el \emph{uso} de modelos econ\'omicos y en la \emph{estimaci\'on} emp\'irica (microeconom\'ia, econometr\'ia). Existe, sin embargo, una brecha sistem\'atica en la capacidad de \emph{construir y extender} modelos formales propios. En la pr\'actica, esto se manifiesta en las tesis: una proporci\'on importante son puramente emp\'iricas, o invocan un modelo te\'orico como ``caja negra'' que se cita pero no se deriva ni se adapta al problema estudiado. El resultado son trabajos que estiman correlaciones sin un marco te\'orico propio que las interprete. Este curso ataca directamente esa deficiencia: ense\~na el oficio de leer un modelo, rederivar su resultado central y extenderlo relajando un supuesto ---la competencia exacta que separa una tesis descriptiva de una contribuci\'on anal\'itica.
+
+\textbf{El curso como pieza faltante del plan de estudios.}
+Donde microeconom\'ia y econometr\'ia ense\~nan a \emph{usar} y \emph{estimar} modelos, este curso ense\~na a \emph{formularlos}. Es la contraparte de modelamiento formal del componente emp\'irico, completando el tri\'angulo teor\'ia--modelo--datos que toda investigaci\'on econ\'omica rigurosa requiere. La incorporaci\'on de LLMs como asistentes de demostraci\'on ---no como sustituto del razonamiento, sino como herramienta auditada bajo el juicio del estudiante--- vuelve tratable, en un semestre de pregrado, una competencia que tradicionalmente se posterga al posgrado.
+
+\textbf{Pertinencia y oportunidad.}
+La inteligencia artificial generativa ya forma parte del instrumental del economista investigador. Korinek (2023), en el \emph{Journal of Economic Literature}, documenta sistem\'aticamente sus usos en la investigaci\'on econ\'omica ---incluida la asistencia en derivaciones matem\'aticas--- y la American Economic Association la ha incorporado a su programa de educaci\'on continua para economistas. Ofrecer este curso posiciona a la Facultad como pionera en la regi\'on en formar economistas capaces de usar estas herramientas con rigor anal\'itico, anticip\'andose a una transformaci\'on que ya est\'a en marcha en los programas y revistas de frontera.
+
+\subsection*{Antecedentes internacionales}
+\begin{itemize}
+\item \textbf{Journal of Economic Literature.} Korinek (2023) ofrece la s\'intesis de referencia sobre IA generativa en investigaci\'on econ\'omica, con una secci\'on dedicada a las derivaciones matem\'aticas asistidas por LLM ---exactamente la competencia central de este curso.
+\item \textbf{American Economic Association.} La AEA incorpor\'o sesiones sobre IA generativa para economistas a su \emph{Recent Developments Series} (educaci\'on continua, reuniones ASSA), se\~nal de que el tema ya es parte del curr\'iculo profesional de la disciplina.
+\item \textbf{Literatura de frontera.} El curso lee art\'iculos en circulaci\'on activa en \texttt{arXiv} (\texttt{cs.GT}, \texttt{econ.TH}) y en revistas de econom\'ia e investigaci\'on de operaciones, lo que garantiza un contenido actualizado al estado del arte y no a un temario congelado.
+\end{itemize}
+
+%================================================================
+\section{Impacto en la Investigaci\'on y las Tesis}
+
+El dise\~no del curso est\'a orientado a producir investigaci\'on, no solo a transmitir contenidos:
+
+\begin{itemize}
+\item \textbf{Cada estudiante termina con una pieza de investigaci\'on.} El entregable final ---un documento de 6--8 p\'aginas con un resultado te\'orico propio y su verificaci\'on--- constituye la semilla de un cap\'itulo de tesis o un \emph{writing sample} para postular a programas de posgrado.
+\item \textbf{Conexi\'on directa con la tesis.} Quien ya tenga tema de tesis puede usar el trabajo final para \textbf{formular el modelo econ\'omico que hoy le falta}, en lugar de extender un art\'iculo ajeno.
+\item \textbf{Incubadora de \emph{working papers}.} Las mejores extensiones pueden desarrollarse hasta convertirse en documentos de trabajo de la Facultad o env\'ios a \texttt{arXiv}, eventualmente co-autorados.
+\item \textbf{Se\~nal competitiva para posgrado y empleo.} La combinaci\'on de modelamiento formal, fluidez en IA y econometr\'ia es precisamente el perfil que demandan los programas de doctorado de frontera y los empleadores de investigaci\'on (banca central, organismos multilaterales, centros de pol\'itica).
+\item \textbf{Cultura de rigor en el uso de IA.} Verificar a mano lo que propone un modelo de lenguaje ---y aprender a detectar cu\'ando se equivoca--- es una competencia transversal valiosa para toda la formaci\'on del estudiante.
+\end{itemize}
+
+%================================================================
+\section{Resultados de Aprendizaje}
+
+Al finalizar el curso, las y los estudiantes ser\'an capaces de:
+
+\begin{itemize}
+\item \textbf{Leer cr\'iticamente} un art\'iculo de teor\'ia econ\'omica, identificando su mecanismo central, sus supuestos clave y la estructura l\'ogica de su resultado principal.
+\item \textbf{Reproducir a mano} la derivaci\'on de un resultado formal (condiciones de primer orden, comparativa est\'atica, una proposici\'on sencilla) a partir de los supuestos del modelo.
+\item \textbf{Extender un modelo}: relajar un supuesto, rederivar la proposici\'on afectada y comprobar el resultado con una verificaci\'on num\'erica o simb\'olica (SymPy o Monte Carlo).
+\item \textbf{Formular un modelo propio} que d\'e estructura te\'orica a una pregunta emp\'irica.
+\item \textbf{Usar LLMs como asistentes de demostraci\'on} de forma rigurosa, documentando d\'onde el modelo acierta y d\'onde se equivoca, y manteniendo el control anal\'itico.
+\item \textbf{Verificar la matem\'atica de la IA}: detectar demostraciones plausibles pero incorrectas generadas por un modelo de lenguaje, y corregirlas.
+\item \textbf{Escribir una demostraci\'on completa a mano}, sin omitir pasos, como prueba de comprensi\'on propia.
+\item \textbf{Exponer} un resultado te\'orico ---propio o ajeno--- de forma clara y en tiempo acotado, con diapositivas y compartiendo pantalla en una sesi\'on virtual.
+\end{itemize}
+
+%================================================================
+\section{Contenido del Curso}
+
+El curso recorre doce art\'iculos, ordenados por dificultad matem\'atica creciente. En cursivas, la t\'ecnica que cada sesi\'on introduce.
+
+\textbf{Sesiones 1--2. La IA como insumo sustituible: la paradoja de productividad.}
+Aouad, Lykouris \& Zhong (2026). El agente elige esfuerzo para maximizar producto menos costo, con habilidad, esfuerzo y asistencia de IA como sustitutos perfectos. La Proposici\'on 2.1 caracteriza el esfuerzo \'optimo y se demuestra por casos, sin derivar. Despu\'es, las tres paradojas del art\'iculo ---desaprendizaje, no confiabilidad y polarizaci\'on--- se enuncian y discuten sin demostrar.
+\emph{(M\'aximo de una funci\'on c\'oncava; soluci\'on interior frente a soluci\'on de esquina; condici\'on de regularidad y desempate del argumento maximizador.)}
+
+\textbf{Sesiones 3--4. Juicio y complementariedad: el valor de una herramienta cognitiva.}
+Agrawal, Gans \& Goldfarb (2025). El valor de una herramienta se descompone en juicio de oportunidad y juicio de resultado: el primero es siempre complemento, el segundo solo bajo una condici\'on cuyo signo el propio art\'iculo no logra determinar. Luego, la varianza salarial y su forma de U \emph{condicional} respecto a la calidad de la herramienta.
+\emph{(Condici\'on de primer orden; teorema de la envolvente; suma geom\'etrica; \'algebra de varianzas y coeficiente de variaci\'on.)}
+
+\textbf{Sesiones 5--6. La IA como se\~nal: creencias y frontera tecnol\'ogica.}
+Jovanovic \& Nyarko (1996): aprendizaje por la pr\'actica y elecci\'on de tecnolog\'ia, en su versi\'on de agente miope. Luego Quispe \& Xu (2026): delegaci\'on ag\'entica y expansi\'on de la frontera de lenguajes de programaci\'on, como ejemplo trabajado de c\'omo un modelo se convierte en predicci\'on contrastable y \'esta en un art\'iculo.
+\emph{(Actualizaci\'on bayesiana Normal--Normal escrita en precisiones; umbral de cambio de tecnolog\'ia.)}
+
+\textbf{Sesi\'on 7. Sustituci\'on y complementariedad en una misma funci\'on: el colapso de conocimiento.}
+Acemoglu, Kong \& Ozdaglar (2026). La IA ag\'entica sustituye el esfuerzo humano mientras el acervo de conocimiento general lo complementa; toda la tensi\'on del curso se reduce a dos signos de derivadas cruzadas. El resultado din\'amico ---un estado estacionario de colapso--- se lee en un diagrama de 45 grados.
+\emph{(Derivadas cruzadas y comparativa est\'atica mon\'otona; iteraci\'on de una ecuaci\'on en diferencias de una variable.)}
+
+\textbf{Sesi\'on 8. Delegaci\'on y supervisi\'on: la paradoja del contrato.}
+Bastani \& Cachon. Cuando el esfuerzo de supervisi\'on del humano es inobservable y costoso, el salario requerido escala inversamente con la probabilidad de error de la IA: supervisar se vuelve prohibitivamente caro justo cuando la herramienta mejora, y el principal puede llegar a preferir una herramienta menos confiable.
+\emph{(Riesgo moral; restricciones de incentivos y de participaci\'on.)}
+
+\textbf{Sesi\'on 9. C\'omo se responde a un art\'iculo.}
+Yin, Su \& Li (2026) resuelven el problema anterior mediante auditor\'ia con centinelas. Sesi\'on dedicada a la anatom\'ia de una contribuci\'on que responde a otra: qu\'e supuesto se toca, qu\'e resultado cambia y qu\'e queda en pie.
+
+\textbf{Sesi\'on 10. Autonom\'ia, capacidad y desigualdad.}
+Ide \& Talam\`as (2025). Manteniendo fija la capacidad de la IA, su \emph{autonom\'ia} invierte qui\'en gana; la capacidad determina de forma independiente si tambi\'en gana la base de la distribuci\'on.
+\emph{(Modelo de asignaci\'on, en versi\'on de dos o tres tipos discretos.)}
+
+\textbf{Sesi\'on 11. Automatizaci\'on basada en tareas.}
+Acemoglu \& Restrepo (2018). Desplazamiento y reinstauraci\'on de tareas, y su efecto sobre salarios y participaci\'on del trabajo en el producto.
+\emph{(Continuo de tareas; integral sobre el conjunto de tareas.)}
+
+\textbf{Sesi\'on 12. La evidencia.}
+Los experimentos que esta literatura cita: Brynjolfsson, Li \& Raymond; Peng et al.; METR; Dell'Acqua et al. Cada uno se mapea al supuesto te\'orico que pone a prueba, y se discute qu\'e resultados lo sostienen y cu\'ales no.
+
+%================================================================
+\section{Metodolog\'ia}
+
+El curso es \textbf{virtual} y sesiona \textbf{dos veces por semana, mi\'ercoles y viernes} (2 horas cada sesi\'on) por Zoom. Todas las exposiciones se hacen compartiendo pantalla. Se organiza en cuatro tramos:
+
+\begin{itemize}
+\item \textbf{Art\'iculos presentados por el profesor} (sesiones 1--12, del \textbf{19 de agosto al 25 de setiembre}, es decir hasta antes de los ex\'amenes parciales). Un art\'iculo por sesi\'on: lectura guiada, reproducci\'on del resultado central en clase y discusi\'on. \textbf{El art\'iculo se lee antes de la sesi\'on}, no durante: la clase reconstruye la demostraci\'on suponiendo que todas y todos llegan con el texto le\'ido. Cada sesi\'on abre con uno o dos \textbf{ex\'amenes orales} de 5 minutos.
+\item \textbf{Exposici\'on del tema} (sesiones 13--16, del \textbf{7 al 16 de octubre}). Cada estudiante expone en 20 minutos el tema y la extensi\'on que ha decidido trabajar; cuatro exposiciones por sesi\'on.
+\item \textbf{Taller} (sesiones 17--18, \textbf{21 y 23 de octubre}). Trabajo en clase sobre el proyecto propio, con acompa\~namiento del profesor.
+\item \textbf{Presentaciones finales} (sesiones 19--26, del \textbf{28 de octubre al 20 de noviembre}). Dos exposiciones por sesi\'on.
+\end{itemize}
+
+\textbf{Materiales y herramientas.} Los art\'iculos, las diapositivas y las entregas se gestionan por \textbf{GitHub}, siguiendo el ciclo de rama, \emph{pull request} y fusi\'on. La primera semana se dedica \'integramente a instalar y configurar el entorno de trabajo: Git, credenciales y el flujo de \emph{pull requests}; editor con soporte \LaTeX; interfaz de l\'inea de comandos de agentes de IA; y \textbf{SymPy} para las verificaciones simb\'olicas y num\'ericas. No se requiere experiencia previa de programaci\'on.
+
+%================================================================
+\section{Evaluaci\'on}
+
+\textbf{El curso no tiene examen parcial ni examen final escritos.} La evaluaci\'on es un proceso escalonado que culmina en un trabajo propio. Los cuatro rubros usan la nomenclatura del sistema de notas de la Universidad, de modo que lo que se lee aqu\'i es exactamente lo que aparece en el registro.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}lXc@{}}
+\toprule
+\textbf{Rubro} & \textbf{Qu\'e comprende} & \textbf{Peso (\%)} \\
+\midrule
+\textbf{Trabajo final} & Documento de 6--8 p\'aginas m\'as anexo manuscrito & 30 \\
+\textbf{Presentaci\'on final} & Exposici\'on del trabajo, del 28 de octubre al 20 de noviembre & 30 \\
+\textbf{Promedio de trabajos} & Los seis repositorios semanales (20) y la exposici\'on del tema (10) & 30 \\
+\textbf{Control de lectura} & Examen oral de 5 minutos sobre el art\'iculo designado, por sorteo & 10 \\
+\midrule
+\textbf{Total} & & \textbf{100} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+%----------------------------------------------------------------
+\subsection*{Promedio de trabajos (30\,\%)}
+
+Se compone de dos entregas: el \textbf{promedio de los seis repositorios semanales}, que aporta 20 de los 30 puntos, y la \textbf{exposici\'on del tema}, que aporta los 10 restantes.
+
+\subsubsection*{Los repositorios semanales (20\,\%)}
+
+\begin{itemize}
+\item \textbf{Un repositorio nuevo en GitHub por cada art\'iculo designado.} Son seis semanas de art\'iculos, de modo que al terminar el semestre cada estudiante tiene \textbf{al menos seis repositorios}.
+\item \textbf{Plazo: martes a las 22:00.} El trabajo se hace por el ciclo de rama, \emph{pull request} y fusi\'on visto en las primeras sesiones: nada se escribe directo en \texttt{main}.
+\item \textbf{Todas y todos registran el enlace de su repositorio cada semana}, resulten sorteados o no, en el archivo compartido del curso. Basta la URL del repositorio. Un repositorio que existe pero no est\'a registrado cuenta como no entregado.
+\item \textbf{Contenido m\'inimo:} un \texttt{README.md} de una p\'agina con el problema del agente y el resultado principal con sus condiciones; un \texttt{prompts.md} con las consultas al LLM y sus respuestas sin editar; una carpeta \texttt{mano/} con al menos una fotograf\'ia de una derivaci\'on hecha a mano; y la \textbf{presentaci\'on en Beamer}, con su fuente \LaTeX{} y su PDF. Por encima de ese piso, el contenido es libre: extensiones, simulaciones, casos l\'imite o lo que el art\'iculo sugiera.
+\end{itemize}
+
+\textbf{Sobre la derivaci\'on a mano semanal.} No se pide derivar el art\'iculo completo, sino que exista \textbf{al menos un lugar donde no se le crey\'o a la m\'aquina y se comprob\'o a mano}: el paso que el modelo hizo mal, el que no se entendi\'o hasta hacerlo, o el que pareci\'o demasiado f\'acil para ser cierto. Una fotograf\'ia tomada con el tel\'efono es suficiente.
+
+El detalle operativo ---estructura de carpetas, convenci\'on de nombres, flujo de \emph{pull requests} y una bater\'ia de \emph{prompts} para empezar--- est\'a en la \emph{Gu\'ia de los repositorios del curso}, que se entrega en la primera semana.
+
+\subsubsection*{Exposici\'on del tema (10\,\%)}
+
+Entre el \textbf{7 y el 16 de octubre}, cada estudiante expone en \textbf{20 minutos} el tema que ha decidido trabajar: qu\'e art\'iculo toma ---o qu\'e modelo de su tesis formula---, qu\'e supuesto relaja, y qu\'e resultado espera que cambie. Cuatro exposiciones por sesi\'on.
+
+La exposici\'on se acompa\~na de un documento de dos p\'aginas con la condici\'on de primer orden que espera obtener y la justificaci\'on de por qu\'e ese resultado no est\'a ya resuelto en los ap\'endices del art\'iculo.
+
+%----------------------------------------------------------------
+\subsection*{Control de lectura: el examen oral de 5 minutos (10\,\%)}
+
+Al inicio de cada sesi\'on del tramo de art\'iculos, \textbf{el profesor llama por sorteo a uno o dos estudiantes} para exponer en \textbf{5 minutos}, compartiendo pantalla, el contenido de su repositorio de esa semana.
+
+\begin{itemize}
+\item Se aplica en \textbf{las doce sesiones} del tramo de art\'iculos, desde la primera (mi\'ercoles 19 de agosto): el art\'iculo designado de esa semana se anuncia el viernes 14 de agosto y su repositorio vence el martes 18.
+\item El profesor \textbf{anuncia el art\'iculo designado en la sesi\'on del viernes anterior}, de modo que haya fin de semana, lunes y martes para trabajarlo.
+\item \textbf{El nombre de quien expone no se anuncia}: se sortea en la sesi\'on, de modo que toda la clase llega preparada.
+\item El sorteo es \textbf{sin reposici\'on}: nadie vuelve a ser llamado hasta que todas y todos hayan pasado al menos una vez.
+\item Quien no asiste a la sesi\'on en la que resulta sorteado obtiene cero en esa ronda.
+\item \textbf{Si el repositorio de esa semana no est\'a entregado y registrado al cierre del martes, el control de lectura se califica con cero}, con independencia de la calidad de la exposici\'on.
+\end{itemize}
+
+\textbf{La presentaci\'on es un Beamer que vive dentro del repositorio} y expone lo que ese repositorio contiene y lo que se logr\'o con \'el. Estructura obligatoria: portada con el enlace al repositorio, m\'as cuatro diapositivas.
+
+\begin{enumerate}
+\item \textbf{El art\'iculo.} Qu\'e pregunta responde, cu\'al es el \emph{\'unico} mecanismo econ\'omico que formaliza, y el problema del agente escrito expl\'icitamente: qu\'e se maximiza, sobre qu\'e variable y bajo qu\'e restricciones.
+\item \textbf{El resultado principal.} El enunciado exacto de la proposici\'on, \textbf{con todas sus condiciones}, y debajo la intuici\'on en una sola oraci\'on.
+\item \textbf{Lo que hice.} Qu\'e explor\'e en el repositorio: qu\'e supuestos consider\'e relajar, qu\'e extensiones plante\'e, qu\'e simul\'e y qu\'e result\'o. Los callejones sin salida tambi\'en cuentan, si se explica por qu\'e no llevaban a ninguna parte.
+\item \textbf{D\'onde no le cre\'i a la IA.} El paso que verifiqu\'e a mano ---con la fotograf\'ia en pantalla---, qu\'e hab\'ia respondido el modelo y \textbf{mi veredicto}: correcto, incorrecto o no verificable, con la raz\'on.
+\end{enumerate}
+
+\textbf{Reglas de forma.} Sin animaciones. Sin capturas de pantalla del art\'iculo: las ecuaciones se escriben en \LaTeX. Se califica sobre 4 puntos, uno por diapositiva, con \'enfasis en dos cosas: que las condiciones de la proposici\'on est\'en \emph{completas} (punto 2) y que el veredicto sobre la IA est\'e \emph{justificado} (punto 4). Un veredicto sin raz\'on no punt\'ua.
+
+%----------------------------------------------------------------
+\subsection*{Presentaci\'on final (30\,\%)}
+
+Entre el \textbf{28 de octubre y el 20 de noviembre}, dos exposiciones por sesi\'on. Es un \textbf{avance en curso}, no el producto terminado: se expone el modelo, la proposici\'on y el estado de la demostraci\'on, y se recibe cr\'itica de la clase antes de escribir la versi\'on final.
+
+%----------------------------------------------------------------
+\subsection*{Trabajo final (30\,\%)}
+
+Cada estudiante elige una de dos v\'ias, ambas con la misma especificaci\'on de entrega:
+
+\begin{itemize}
+\item \textbf{V\'ia A --- Extensi\'on.} Relajar un supuesto de un art\'iculo del curso y rederivar la proposici\'on afectada.
+\item \textbf{V\'ia B --- Modelo de tesis.} Formular el modelo econ\'omico que sostiene su propia tesis, hoy ausente o citado como caja negra.
+\end{itemize}
+
+\textbf{Entregable (6--8 p\'aginas), id\'entico en ambas v\'ias:} (i) el modelo y el supuesto en cuesti\'on; (ii) \textbf{una} proposici\'on con su demostraci\'on completa; (iii) una verificaci\'on simb\'olica o num\'erica (SymPy o Monte Carlo); (iv) un anexo de colaboraci\'on con IA que documente, para cada aporte relevante del modelo de lenguaje, qu\'e afirm\'o, qu\'e veredicto merece y c\'omo se comprob\'o.
+
+\textbf{Anexo manuscrito obligatorio.} El trabajo final se entrega acompa\~nado de un \textbf{documento escrito a mano con todas las derivaciones, paso por paso y sin saltos}. No es un resumen ni una selecci\'on: es la demostraci\'on completa, con cada manipulaci\'on algebraica expl\'icita, cada regla de derivaci\'on nombrada y cada condici\'on verificada donde corresponde. Un paso omitido ---por obvio que parezca--- es un paso que no se demuestra haber entendido.
+
+Este anexo es el n\'ucleo de la evaluaci\'on del trabajo, no un tr\'amite: un documento impecable cuya versi\'on manuscrita salta pasos indica que la derivaci\'on se obtuvo sin comprenderla. Puede entregarse fotografiado o escaneado, siempre que sea legible.
+
+El documento vence \textbf{para todo el curso en la misma fecha}, en la semana de cierre, de modo que quien expone primero no queda en desventaja y todas y todos incorporan la cr\'itica recibida antes de escribir.
+
+%================================================================
+\section{Normas del Curso}
+
+\textbf{Uso de inteligencia artificial.} El uso de LLMs no solo est\'a permitido: es parte del m\'etodo del curso. Rigen tres reglas.
+
+\begin{enumerate}
+\item \textbf{Declararlo.} Todo aporte relevante de un modelo de lenguaje se documenta: el \emph{prompt}, lo que respondi\'o y c\'omo se verific\'o.
+\item \textbf{Verificarlo.} No se presenta como propio ning\'un resultado que no se haya comprobado a mano o con SymPy. Un paso incorrecto tomado de un LLM y presentado sin verificaci\'on se califica como error propio.
+\item \textbf{Adjudicarlo.} Cuando el modelo y quien escribe discrepan, el trabajo debe decir qui\'en tiene raz\'on y por qu\'e. El juicio final es siempre del estudiante.
+\end{enumerate}
+
+\textbf{Entregas.} Los repositorios semanales vencen los \textbf{martes a las 22:00}, con el trabajo fusionado en \texttt{main} y el enlace del repositorio registrado en el archivo compartido. Los hitos y el trabajo final se entregan en PDF por GitHub en la fecha indicada. La presentaci\'on en Beamer vive dentro del repositorio de esa semana, con su fuente \LaTeX{} y su PDF.
+
+\textbf{Asistencia.} El control de lectura es aleatorio y se rinde en la sesi\'on. La exposici\'on del tema y la presentaci\'on final tienen fecha asignada y no se reprograman salvo justificaci\'on documentada.
+
+\textbf{Honestidad acad\'emica.} Presentar como propia una derivaci\'on ajena ---de un colega, de un art\'iculo o de un modelo de lenguaje--- sin atribuirla constituye falta acad\'emica y se rige por el reglamento de la Universidad.
+
+\textbf{Advertencia sobre las fuentes.} Varios de los art\'iculos del curso son \emph{preprints} y documentos de trabajo sin arbitraje, en revisi\'on activa. Se leen precisamente por estar en la frontera, pero se discuten con esa cautela: verificar el estatus editorial de lo que uno cita es parte del oficio que este curso ense\~na.
+
+%================================================================
+\section{Bibliograf\'ia}
+
+\textbf{Art\'iculos del curso, en orden de presentaci\'on}
+\begin{itemize}
+\item Aouad, A., Lykouris, T., \& Zhong, H. (2026). \emph{Human-AI Productivity Paradoxes: Modeling the Interplay of Skill, Effort, and AI Assistance.} \href{https://arxiv.org/abs/2605.11350}{arXiv:2605.11350} [cs.GT].
+\item Agrawal, A., Gans, J., \& Goldfarb, A. (2025). \emph{The Economics of Bicycles for the Mind.} NBER Working Paper 34034. \href{https://doi.org/10.3386/w34034}{doi:10.3386/w34034}.
+\item Jovanovic, B., \& Nyarko, Y. (1996). \emph{Learning by Doing and the Choice of Technology.} Econometrica, 64(6), 1299--1310. \href{https://doi.org/10.2307/2171832}{doi:10.2307/2171832}.
+\item Quispe, A., \& Xu, K. (2026). \emph{Agentic Delegation and the Language Frontier of Software Developers: A Model and Evidence from Claude Code on GitHub.} \href{https://arxiv.org/abs/2605.25438}{arXiv:2605.25438}.
+\item Acemoglu, D., Kong, D., \& Ozdaglar, A. (2026). \emph{AI, Human Cognition and Knowledge Collapse.} NBER Working Paper 34910. \href{https://doi.org/10.3386/w34910}{doi:10.3386/w34910}.
+\item Bastani, H., \& Cachon, G.~P. (2026). \emph{The Human-AI Contracting Paradox.} SSRN 5962739. \href{https://doi.org/10.2139/ssrn.5962739}{doi:10.2139/ssrn.5962739}.
+\item Yin, Q., Su, Z., \& Li, W. (2026). \emph{Overcoming the Incentive Collapse Paradox.} ICML 2026. \href{https://arxiv.org/abs/2603.27049}{arXiv:2603.27049}.
+\item Ide, E., \& Talam\`as, E. (2025). \emph{Artificial Intelligence in the Knowledge Economy.} Journal of Political Economy, 133(12), 3762--3800. \href{https://doi.org/10.1086/737233}{doi:10.1086/737233}.
+\item Acemoglu, D., \& Restrepo, P. (2018). \emph{The Race between Man and Machine.} American Economic Review, 108(6), 1488--1542. \href{https://doi.org/10.1257/aer.20160696}{doi:10.1257/aer.20160696}.
+\end{itemize}
+
+\textbf{Evidencia emp\'irica (sesi\'on 12)}
+\begin{itemize}
+\item Brynjolfsson, E., Li, D., \& Raymond, L. (2025). \emph{Generative AI at Work.} Quarterly Journal of Economics, 140(2), 889--942. \href{https://doi.org/10.1093/qje/qjae044}{doi:10.1093/qje/qjae044}.
+\item Peng, S., Kalliamvakou, E., Cihon, P., \& Demirer, M. (2023). \emph{The Impact of AI on Developer Productivity: Evidence from GitHub Copilot.} \href{https://arxiv.org/abs/2302.06590}{arXiv:2302.06590}.
+\item METR (2025). \emph{Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity.} \href{https://arxiv.org/abs/2507.09089}{arXiv:2507.09089}.
+\item Dell'Acqua, F., et al. (2023). \emph{Navigating the Jagged Technological Frontier.} Harvard Business School Working Paper 24-013. \href{https://doi.org/10.2139/ssrn.4573321}{doi:10.2139/ssrn.4573321}.
+\end{itemize}
+
+\textbf{Lecturas complementarias}
+\begin{itemize}
+\item Chen, L., \& Meng, D. (2026). \emph{When AI Levels the Playing Field.} \href{https://arxiv.org/abs/2603.05565}{arXiv:2603.05565}.
+\item Shen, J., \& Tamkin, A. (2026). \emph{How AI Impacts Skill Formation.} \href{https://arxiv.org/abs/2601.20245}{arXiv:2601.20245} [cs.CY].
+\item Ganuthula, V.~R.~R., \& Singh, M.~K. (2026). \emph{The Paradox of Augmentation: A Theoretical Model of AI-Induced Skill Atrophy.} Human Behavior and Emerging Technologies, 2026(1), art. 8303770. \href{https://doi.org/10.1155/hbe2/8303770}{doi:10.1155/hbe2/8303770}.
+\item Acemoglu, D. (2024). \emph{The Simple Macroeconomics of AI.} Economic Policy. \href{https://www.nber.org/papers/w32487}{NBER w32487}.
+\item Garicano, L. (2000). \emph{Hierarchies and the Organization of Knowledge in Production.} Journal of Political Economy, 108(5), 874--904. \href{https://doi.org/10.1086/317671}{doi:10.1086/317671}.
+\end{itemize}
+
+\textbf{IA generativa en la investigaci\'on econ\'omica}
+\begin{itemize}
+\item Korinek, A. (2023). \emph{Generative AI for Economic Research: Use Cases and Implications for Economists.} Journal of Economic Literature, 61(4), 1281--1317. \href{https://doi.org/10.1257/jel.20231736}{doi:10.1257/jel.20231736}.
+\item American Economic Association. \emph{Recent Developments Series} (educaci\'on continua). \url{https://www.aeaweb.org/cont_education/}
+\end{itemize}
+
+\textbf{Herramientas}
+\begin{itemize}
+\item SymPy Development Team. \emph{SymPy: Symbolic Mathematics in Python.} \url{https://www.sympy.org}
+\end{itemize}
+
+%================================================================
+\section{Cronograma --- Semestre 2026-II}
+
+Sesiones los \textbf{mi\'ercoles y viernes} (2 horas cada una). Inicio de clases: \textbf{lunes 10 de agosto de 2026}; \'ultimo d\'ia de clases: \textbf{s\'abado 21 de noviembre}. Durante la semana de ex\'amenes parciales (28 set--3 oct) la Universidad suspende las clases.
+
+\begin{xltabular}{\textwidth}{@{}clXL{2.6cm}@{}}
+\toprule
+\textbf{Ses.} & \textbf{Fecha} & \textbf{Contenido} & \textbf{Evaluaci\'on} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Ses.} & \textbf{Fecha} & \textbf{Contenido} & \textbf{Evaluaci\'on} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{4}{@{}l}{\textit{Instalaci\'on y entorno de trabajo}}\\
+--- & mi\'e 12 ago & Introducci\'on al curso. Git y GitHub; credenciales & \\
+--- & vie 14 ago & Editor con \LaTeX; CLI de agentes; verificaci\'on con SymPy & \\[3pt]
+\multicolumn{4}{@{}l}{\textit{Art\'iculos presentados por el profesor --- cada sesi\'on abre con el examen oral}}\\
+1 & mi\'e 19 ago & \textbf{Aouad--Lykouris--Zhong \S2.} Prop. 2.1: m\'aximo c\'oncavo, soluci\'on interior vs. de esquina & Control lect. \\
+2 & vie 21 ago & \textbf{ALZ \S\S3--5.} Las tres paradojas, enunciadas sin demostrar & Control lect. \\
+3 & mi\'e 26 ago & \textbf{Agrawal--Gans--Goldfarb I.} Props. 1--2: condici\'on de primer orden y teorema de la envolvente & Control lect. \\
+4 & vie 28 ago & \textbf{AGG II.} Prop. 3: \'algebra de varianzas; la forma de U \emph{condicional} & Control lect. \\
+5 & mi\'e 2 set & \textbf{Jovanovic--Nyarko \S IV.} Trayectorias miopes; Normal--Normal en precisiones & Control lect. \\
+6 & vie 4 set & \textbf{Quispe \& Xu (2026).} De un modelo a una predicci\'on contrastable & Control lect. \\
+7 & mi\'e 9 set & \textbf{Acemoglu--Kong--Ozdaglar.} Derivadas cruzadas: complementos vs. sustitutos; colapso de conocimiento en diagrama de 45$^\circ$ & Control lect. \\
+8 & vie 11 set & \textbf{Bastani \& Cachon.} Paradoja del contrato: riesgo moral, incentivos y participaci\'on & Control lect. \\
+9 & mi\'e 16 set & \textbf{Yin, Su \& Li.} Auditor\'ia con centinelas: c\'omo se responde a un art\'iculo & Control lect. \\
+10 & vie 18 set & \textbf{Ide \& Talam\`as} (JPE 2025). Autonom\'ia y capacidad; versi\'on de tipos discretos & Control lect. \\
+11 & mi\'e 23 set & \textbf{Acemoglu \& Restrepo (2018).} Continuo de tareas: desplazamiento y reinstauraci\'on & Control lect. \\
+12 & vie 25 set & \textbf{Sesi\'on emp\'irica.} Brynjolfsson--Li--Raymond, Peng et al., METR, Dell'Acqua et al. & Control lect. \\[3pt]
+--- & 28 set -- 3 oct & \textit{Semana de ex\'amenes parciales --- sin clases} & \\[3pt]
+\multicolumn{4}{@{}l}{\textit{Exposici\'on del tema --- cuatro por sesi\'on, 20 minutos cada una}}\\
+13 & mi\'e 7 oct & Exposici\'on del tema: estudiantes 1--4 & \\
+14 & vie 9 oct & Exposici\'on del tema: estudiantes 5--8 & \\
+15 & mi\'e 14 oct & Exposici\'on del tema: estudiantes 9--12 & \\
+16 & vie 16 oct & Exposici\'on del tema: estudiantes 13--16 & \textbf{Exp. tema} \\[3pt]
+\multicolumn{4}{@{}l}{\textit{Taller}}\\
+17 & mi\'e 21 oct & Trabajo en clase sobre el proyecto propio & \\
+18 & vie 23 oct & Trabajo en clase; asignaci\'on de turnos de exposici\'on final & \\[3pt]
+\multicolumn{4}{@{}l}{\textit{Presentaci\'on final --- dos exposiciones por sesi\'on}}\\
+19 & mi\'e 28 oct & Exposiciones 1--2 & \\
+20 & vie 30 oct & Exposiciones 3--4 & \\
+21 & mi\'e 4 nov & Exposiciones 5--6 & \\
+22 & vie 6 nov & Exposiciones 7--8 & \\
+23 & mi\'e 11 nov & Exposiciones 9--10 & \\
+24 & vie 13 nov & Exposiciones 11--12 & \\
+25 & mi\'e 18 nov & Exposiciones 13--14 & \\
+26 & vie 20 nov & Exposiciones 15--16 & \textbf{Present. final} \\[3pt]
+--- & 23--29 nov & Cierre del semestre & \textbf{Trabajo final} \\
+\end{xltabular}
+
+\subsection*{Fechas oficiales del calendario acad\'emico 2026-II}
+
+\begin{itemize}
+\item \textbf{Matr\'icula extempor\'anea y modificaci\'on de matr\'icula:} s\'abado 8 de agosto.
+\item \textbf{\'Ultimo d\'ia de retiro sin pago de derechos pendientes:} s\'abado 22 de agosto.
+\item \textbf{Ex\'amenes parciales} (el curso no rinde examen; no hay clases esa semana): 28 de setiembre al 3 de octubre.
+\item \textbf{Encuestas de evaluaci\'on docente:} 2 al 15 de noviembre.
+\item \textbf{\'Ultimo d\'ia de retiro con pago de derechos pendientes y \'ultimo d\'ia de clases:} s\'abado 21 de noviembre.
+\item \textbf{Ex\'amenes finales} (el curso no rinde examen; se entrega el trabajo final): 23 al 29 de noviembre.
+\item \textbf{Devoluci\'on de calificaciones finales:} viernes 4 de diciembre, hasta las 12:00 horas; recepci\'on de reclamos hasta las 13:00 horas.
+\end{itemize}
+
+\textbf{Feriados.} Combate de Angamos, jueves 8 de octubre: no afecta las sesiones de mi\'ercoles ni de viernes. Los dem\'as feriados del periodo lectivo ---Santa Rosa (30 de agosto), elecciones regionales y municipales (4 de octubre) y Todos los Santos (1 de noviembre)--- caen en domingo. \textbf{Ninguna sesi\'on del curso coincide con un feriado.}
+
+\emph{Fuente: Calendario Acad\'emico Regular 2026 (aprobado por Comit\'e Ejecutivo el 3 de junio de 2025, actualizado en enero de 2026).}
+
+\end{document}

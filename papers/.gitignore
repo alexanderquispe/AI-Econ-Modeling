@@ -1,0 +1,3 @@
+# Working copies of the readings — fetched with ./fetch.sh, not versioned.
+*.pdf
+*.pdf.part

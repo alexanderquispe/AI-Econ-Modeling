@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA y Modelamiento Económico — Universidad del Pacífico</title>
+<meta name="description" content="Curso de teoría económica de la interacción humano-IA. Leer, rederivar y extender modelos formales usando LLMs como asistentes de demostración. UP 2026-II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#B8BCC8; --accent-dim:rgba(184,188,200,.10); --accent-border:rgba(184,188,200,.24);
+  --bg:#0f0f0f; --bg2:#141414; --bg3:#191919; --border:#222; --border2:#1a1a1a;
+  --text:#e0ddd6; --text2:#bbb; --text3:#888; --text4:#555; --text5:#444;
+  --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* nav */
+.wb-nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  gap:16px;padding:14px 28px;background:rgba(15,15,15,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.wb-nav-brand{font-family:var(--mono);font-size:13px;letter-spacing:.02em;color:var(--text2)}
+.wb-nav-brand b{color:var(--text);font-weight:500}
+.wb-nav-links{display:flex;gap:20px;font-size:13px;color:var(--text3)}
+.wb-nav-links a{text-decoration:none}
+.wb-nav-links a:hover{color:var(--text)}
+
+/* hero */
+.wb-hero{border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.wb-hero-inner{max-width:1180px;margin:0 auto;padding:60px 28px 52px}
+.wb-hero-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.wb-hero h1{margin:0 0 16px;font-size:clamp(30px,4.6vw,46px);line-height:1.1;font-weight:600;letter-spacing:-.02em;max-width:22ch}
+.wb-hero p{margin:0;color:var(--text2);font-size:17px;max-width:62ch}
+.wb-btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.wb-btn{display:inline-block;padding:10px 18px;border-radius:4px;font-size:13.5px;font-weight:500;text-decoration:none;border:1px solid transparent;transition:.15s}
+.wb-btn-primary{background:var(--text);color:#111}
+.wb-btn-primary:hover{background:#fff}
+.wb-btn-ghost{border-color:var(--border);color:var(--text2);background:var(--bg3)}
+.wb-btn-ghost:hover{border-color:var(--accent-border);color:var(--text)}
+
+/* layout */
+.wb-main{max-width:1180px;margin:0 auto;padding:44px 28px 20px;display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+@media(max-width:900px){.wb-main{grid-template-columns:1fr}}
+.wb-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.wb-card-header{padding:15px 20px;border-bottom:1px solid var(--border);font-family:var(--mono);
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
+
+/* table */
+.tablewrap{overflow-x:auto}
+.wb-table{width:100%;border-collapse:collapse;font-size:14px}
+.wb-table th{text-align:left;padding:11px 16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text4);border-bottom:1px solid var(--border);font-weight:400;background:var(--bg3)}
+.wb-table td{padding:12px 16px;border-bottom:1px solid var(--border2);vertical-align:top}
+.wb-table tr:last-child td{border-bottom:none}
+.wb-table tbody tr:hover{background:var(--bg3)}
+.wb-week-num{font-family:var(--mono);font-size:12.5px;color:var(--text4)}
+.wb-date{font-family:var(--mono);font-size:12.5px;color:var(--text3);white-space:nowrap}
+.wb-topic{color:var(--text);font-weight:500}
+.wb-topic small{display:block;font-weight:400;color:var(--text3);font-size:12.5px;margin-top:3px}
+.wb-tlink{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text3);
+  border:1px solid var(--border);border-radius:3px;padding:2px 7px;display:inline-block;margin:2px 4px 2px 0;white-space:nowrap}
+.wb-tlink:hover{border-color:var(--accent-border);color:var(--text)}
+.wb-badge{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  padding:2px 7px;border-radius:3px;white-space:nowrap}
+.badge-ck{background:rgba(184,188,200,.10);color:#B8BCC8;border:1px solid rgba(184,188,200,.22)}
+.badge-hito{background:rgba(255,196,92,.10);color:#e8b45c;border:1px solid rgba(255,196,92,.22)}
+.badge-final{background:rgba(120,200,160,.10);color:#7cc8a0;border:1px solid rgba(120,200,160,.22)}
+tr.wb-block td{background:var(--bg3);font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text4);padding:9px 16px}
+tr.wb-break td{background:#121212;color:var(--text4);font-style:italic}
+tr.wb-now{box-shadow:inset 3px 0 0 var(--accent)}
+tr.wb-now .wb-week-num{color:var(--accent)}
+
+/* sidebar */
+.wb-sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:78px}
+@media(max-width:900px){.wb-sidebar{position:static}}
+.wb-side-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.wb-side-header{padding:13px 18px;border-bottom:1px solid var(--border);font-family:var(--mono);
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
+.wb-side-body{padding:16px 18px}
+.wb-instructor{display:flex;gap:12px;align-items:center;text-decoration:none}
+.wb-avatar{width:40px;height:40px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);
+  display:grid;place-items:center;font-family:var(--mono);font-size:14px;color:var(--text3);flex:none}
+.wb-instructor-name{font-size:14px;font-weight:500;color:var(--text)}
+.wb-instructor-role{font-size:12px;color:var(--text4)}
+.wb-info-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--border2);font-size:13px}
+.wb-info-row:last-child{border-bottom:none}
+.wb-info-label{color:var(--text4);flex:none}
+.wb-info-val{color:var(--text2);text-align:right}
+.wb-info-link{color:var(--accent);text-decoration:none;text-align:right;font-size:12.5px}
+.wb-info-link:hover{text-decoration:underline}
+.wb-progress{margin-top:14px}
+.wb-progress-label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--text4);margin-bottom:7px}
+.wb-progress-bar-bg{height:5px;border-radius:3px;background:var(--bg3);overflow:hidden}
+.wb-progress-bar-fill{height:100%;background:var(--accent);border-radius:3px;transition:width .6s}
+.wb-mat-link{display:block;padding:9px 0;border-bottom:1px solid var(--border2);text-decoration:none;
+  font-size:13.5px;color:var(--text2)}
+.wb-mat-link:last-child{border-bottom:none}
+.wb-mat-link:hover{color:var(--text)}
+.wb-mat-link span{font-family:var(--mono);font-size:11px;color:var(--text5);display:block;margin-top:2px}
+
+/* eval */
+.wb-eval{display:grid;grid-template-columns:1fr auto;gap:6px 14px;font-size:13.5px}
+.wb-eval div:nth-child(even){font-family:var(--mono);color:var(--accent);text-align:right}
+.wb-eval-total{border-top:1px solid var(--border);margin-top:8px;padding-top:8px;font-weight:600}
+
+footer.wb-footer{max-width:1180px;margin:0 auto;padding:34px 28px 56px;border-top:1px solid var(--border);
+  margin-top:34px;color:var(--text4);font-size:13px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer.wb-footer a{color:var(--text3);text-decoration:none}
+footer.wb-footer a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+
+<nav class="wb-nav">
+  <div class="wb-nav-brand"><b>IA y Modelamiento Económico</b> · UP 2026-II</div>
+  <div class="wb-nav-links">
+    <a href="#cronograma">Cronograma</a>
+    <a href="#evaluacion">Evaluación</a>
+    <a href="https://github.com/alexanderquispe/AI-Econ-Modeling/issues">Tareas</a>
+    <a href="https://github.com/alexanderquispe/AI-Econ-Modeling">GitHub</a>
+  </div>
+</nav>
+
+<div class="wb-hero">
+  <div class="wb-hero-inner">
+    <div class="wb-hero-tag">Universidad del Pacífico · Facultad de Economía</div>
+    <h1>Inteligencia Artificial y Modelamiento Económico</h1>
+    <p>Leer, rederivar y <strong>extender</strong> modelos formales de la interacción humano–IA, usando modelos de lenguaje como asistentes de demostración —siempre bajo el juicio crítico de quien los usa.</p>
+    <div class="wb-btn-row">
+      <a class="wb-btn wb-btn-primary" href="https://github.com/alexanderquispe/AI-Econ-Modeling/raw/main/syllabus/es/Silabo_IA_Modelamiento_Economico_UP_2026.pdf">Sílabo (PDF)</a>
+      <a class="wb-btn wb-btn-ghost" href="https://github.com/alexanderquispe/AI-Econ-Modeling/raw/main/syllabus/en/Syllabus_AI_Economic_Modeling_UP_2026.pdf">Syllabus (EN)</a>
+      <a class="wb-btn wb-btn-ghost" href="https://github.com/alexanderquispe/AI-Econ-Modeling/blob/main/syllabus/guia-del-repositorio.md">Guía de repositorios</a>
+      <a class="wb-btn wb-btn-ghost" href="https://github.com/alexanderquispe/AI-Econ-Modeling/issues">Tarea de la semana</a>
+    </div>
+  </div>
+</div>
+
+<div class="wb-main">
+  <div>
+    <div class="wb-card" id="cronograma">
+      <div class="wb-card-header">Cronograma · 26 sesiones · miércoles y viernes</div>
+      <div class="tablewrap">
+      <table class="wb-table">
+        <thead><tr><th style="width:44px">#</th><th style="width:96px">Fecha</th><th>Tema</th><th style="width:210px">Material</th><th style="width:120px">Evaluación</th></tr></thead>
+        <tbody id="sched"></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wb-sidebar">
+    <div class="wb-side-card">
+      <div class="wb-side-header">Docente</div>
+      <div class="wb-side-body">
+        <a class="wb-instructor" href="https://github.com/alexanderquispe">
+          <div class="wb-avatar">AQ</div>
+          <div>
+            <div class="wb-instructor-name">Alexander Quispe</div>
+            <div class="wb-instructor-role">Profesor · también dicta las prácticas</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="wb-side-card">
+      <div class="wb-side-header">Información</div>
+      <div class="wb-side-body">
+        <div class="wb-info-row"><span class="wb-info-label">Semestre</span><span class="wb-info-val">10 ago – 21 nov 2026</span></div>
+        <div class="wb-info-row"><span class="wb-info-label">Sesiones</span><span class="wb-info-val">Mié y vie</span></div>
+        <div class="wb-info-row"><span class="wb-info-label">Modalidad</span><span class="wb-info-val">Virtual · Zoom</span></div>
+        <div class="wb-info-row"><span class="wb-info-label">Entregas</span><span class="wb-info-val">Martes 22:00</span></div>
+        <div class="wb-info-row"><span class="wb-info-label">Asesoría</span><a class="wb-info-link" href="https://calendly.com/alexander-quispe">calendly</a></div>
+        <div class="wb-progress">
+          <div class="wb-progress-label"><span>Avance del semestre</span><span id="pct">—</span></div>
+          <div class="wb-progress-bar-bg"><div class="wb-progress-bar-fill" id="bar" style="width:0%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wb-side-card" id="evaluacion">
+      <div class="wb-side-header">Evaluación</div>
+      <div class="wb-side-body">
+        <div class="wb-eval">
+          <div>Trabajo final</div><div>30 %</div>
+          <div>Presentación final</div><div>30 %</div>
+          <div>Promedio de trabajos</div><div>30 %</div>
+          <div>Control de lectura</div><div>10 %</div>
+          <div class="wb-eval-total">Total</div><div class="wb-eval-total">100 %</div>
+        </div>
+        <p style="color:var(--text4);font-size:12.5px;margin:14px 0 0">Sin examen parcial ni final escritos. <em>Promedio de trabajos</em> son los seis repositorios semanales (20) más la exposición del tema (10).</p>
+      </div>
+    </div>
+
+    <div class="wb-side-card">
+      <div class="wb-side-header">Materiales</div>
+      <div class="wb-side-body">
+        <a class="wb-mat-link" href="https://github.com/alexanderquispe/AI-Econ-Modeling/tree/main/papers">Papers del curso<span>20 PDF · índice con enlaces</span></a>
+        <a class="wb-mat-link" href="https://github.com/alexanderquispe/AI-Econ-Modeling/blob/main/syllabus/guia-del-repositorio.md">Guía de repositorios<span>flujo, prompts y reglas</span></a>
+        <a class="wb-mat-link" href="https://github.com/alexanderquispe/AI-Econ-Modeling/issues">Tareas semanales<span>un issue por artículo designado</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="wb-footer">
+  <div>Universidad del Pacífico · Facultad de Economía · 2026-II</div>
+  <div><a href="https://github.com/alexanderquispe/AI-Econ-Modeling">github.com/alexanderquispe/AI-Econ-Modeling</a></div>
+</footer>
+
+<script>
+const P = "https://github.com/alexanderquispe/AI-Econ-Modeling/tree/main/papers/";
+const S = [
+ {b:"Instalación y entorno de trabajo"},
+ {n:"—", d:"2026-08-12", t:"Introducción al curso. Git y GitHub; credenciales"},
+ {n:"—", d:"2026-08-14", t:"Editor con LaTeX; CLI de agentes; verificación con SymPy"},
+ {b:"Artículos presentados por el profesor · cada sesión abre con el control de lectura"},
+ {n:1,  d:"2026-08-19", t:"Aouad–Lykouris–Zhong §2", s:"Prop. 2.1: máximo cóncavo, interior vs. esquina", m:[["paper","https://arxiv.org/abs/2605.11350"],["pdf",P+"01-aouad-lykouris-zhong-2026-productivity-paradoxes.pdf"]], e:"ck"},
+ {n:2,  d:"2026-08-21", t:"ALZ §§3–5", s:"Las tres paradojas, enunciadas sin demostrar", m:[["paper","https://arxiv.org/abs/2605.11350"]], e:"ck"},
+ {n:3,  d:"2026-08-26", t:"Agrawal–Gans–Goldfarb I", s:"Props. 1–2: CPO y teorema de la envolvente", m:[["paper","https://www.nber.org/papers/w34034"],["pdf",P+"05-agrawal-gans-goldfarb-2025-bicycles-for-the-mind.pdf"],["tarea","https://github.com/alexanderquispe/AI-Econ-Modeling/issues/1"]], e:"ck"},
+ {n:4,  d:"2026-08-28", t:"AGG II", s:"Prop. 3: álgebra de varianzas; la forma de U condicional", m:[["paper","https://www.nber.org/papers/w34034"]], e:"ck"},
+ {n:5,  d:"2026-09-02", t:"Jovanovic–Nyarko §IV", s:"Trayectorias miopes; Normal–Normal en precisiones", m:[["doi","https://doi.org/10.2307/2171832"],["pdf",P+"03-jovanovic-nyarko-1994-bayesian-foundations-w4739.pdf"]], e:"ck"},
+ {n:6,  d:"2026-09-04", t:"Quispe & Xu (2026)", s:"De un modelo a una predicción contrastable", m:[["arXiv","https://arxiv.org/abs/2605.25438"],["pdf",P+"02-quispe-xu-2026-agentic-delegation-language-frontier.pdf"]], e:"ck"},
+ {n:7,  d:"2026-09-09", t:"Acemoglu–Kong–Ozdaglar", s:"Derivadas cruzadas; colapso de conocimiento en diagrama de 45°", m:[["NBER","https://www.nber.org/papers/w34910"],["pdf",P+"07-acemoglu-kong-ozdaglar-2026-knowledge-collapse.pdf"]], e:"ck"},
+ {n:8,  d:"2026-09-11", t:"Bastani & Cachon", s:"Paradoja del contrato: riesgo moral, incentivos y participación", m:[["SSRN","https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5962739"]], e:"ck"},
+ {n:9,  d:"2026-09-16", t:"Yin, Su & Li", s:"Auditoría con centinelas: cómo se responde a un artículo", m:[["arXiv","https://arxiv.org/abs/2603.27049"],["pdf",P+"08-yin-su-li-2026-incentive-collapse-paradox.pdf"]], e:"ck"},
+ {n:10, d:"2026-09-18", t:"Ide & Talamàs (JPE 2025)", s:"Autonomía y capacidad; versión de tipos discretos", m:[["doi","https://doi.org/10.1086/737233"],["pdf",P+"14-ide-talamas-2025-ai-knowledge-economy.pdf"]], e:"ck"},
+ {n:11, d:"2026-09-23", t:"Acemoglu & Restrepo (2018)", s:"Continuo de tareas: desplazamiento y reinstauración", m:[["doi","https://doi.org/10.1257/aer.20160696"],["pdf",P+"04-acemoglu-restrepo-2018-race-man-machine.pdf"]], e:"ck"},
+ {n:12, d:"2026-09-25", t:"Sesión empírica", s:"Brynjolfsson–Li–Raymond, Peng et al., METR, Dell'Acqua et al.", m:[["papers",P]], e:"ck"},
+ {br:"Semana de exámenes parciales — sin clases", d:"28 set – 3 oct"},
+ {b:"Exposición del tema · cuatro por sesión, 20 minutos cada una"},
+ {n:13, d:"2026-10-07", t:"Exposición del tema: estudiantes 1–4"},
+ {n:14, d:"2026-10-09", t:"Exposición del tema: estudiantes 5–8"},
+ {n:15, d:"2026-10-14", t:"Exposición del tema: estudiantes 9–12"},
+ {n:16, d:"2026-10-16", t:"Exposición del tema: estudiantes 13–16", e:"hito"},
+ {b:"Taller"},
+ {n:17, d:"2026-10-21", t:"Trabajo en clase sobre el proyecto propio"},
+ {n:18, d:"2026-10-23", t:"Trabajo en clase; asignación de turnos de exposición final"},
+ {b:"Presentación final · dos exposiciones por sesión"},
+ {n:19, d:"2026-10-28", t:"Exposiciones 1–2"},
+ {n:20, d:"2026-10-30", t:"Exposiciones 3–4"},
+ {n:21, d:"2026-11-04", t:"Exposiciones 5–6"},
+ {n:22, d:"2026-11-06", t:"Exposiciones 7–8"},
+ {n:23, d:"2026-11-11", t:"Exposiciones 9–10"},
+ {n:24, d:"2026-11-13", t:"Exposiciones 11–12"},
+ {n:25, d:"2026-11-18", t:"Exposiciones 13–14"},
+ {n:26, d:"2026-11-20", t:"Exposiciones 15–16", e:"final"},
+ {br:"Cierre del semestre — entrega del trabajo final", d:"23–29 nov"},
+];
+const BADGE={ck:['badge-ck','Control lect.'],hito:['badge-hito','Exp. tema'],final:['badge-final','Present. final']};
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','set','oct','nov','dic'];
+const fmt=s=>{const[y,m,d]=s.split('-').map(Number);const dt=new Date(y,m-1,d);
+  return ['dom','lun','mar','mié','jue','vie','sáb'][dt.getDay()]+' '+d+' '+MES[m-1];};
+const hoy=new Date();hoy.setHours(0,0,0,0);
+let proxima=null;
+const rows=S.map(r=>{
+  if(r.b) return `<tr class="wb-block"><td colspan="5">${r.b}</td></tr>`;
+  if(r.br) return `<tr class="wb-break"><td>—</td><td class="wb-date">${r.d}</td><td colspan="3">${r.br}</td></tr>`;
+  const dt=new Date(r.d+'T00:00:00');
+  const esProxima=!proxima&&dt>=hoy; if(esProxima)proxima=r.d;
+  const mat=(r.m||[]).map(([l,u])=>`<a class="wb-tlink" href="${u}">${l}</a>`).join('');
+  const bd=r.e?`<span class="wb-badge ${BADGE[r.e][0]}">${BADGE[r.e][1]}</span>`:'';
+  return `<tr class="${esProxima?'wb-now':''}"><td class="wb-week-num">${r.n}</td><td class="wb-date">${fmt(r.d)}</td>`+
+         `<td class="wb-topic">${r.t}${r.s?`<small>${r.s}</small>`:''}</td><td>${mat}</td><td>${bd}</td></tr>`;
+});
+document.getElementById('sched').innerHTML=rows.join('');
+const ini=new Date('2026-08-10T00:00:00'), fin=new Date('2026-11-21T00:00:00');
+const p=Math.max(0,Math.min(100,Math.round((hoy-ini)/(fin-ini)*100)));
+document.getElementById('bar').style.width=p+'%';
+document.getElementById('pct').textContent=p+'%';
+</script>
+</body>
+</html>
