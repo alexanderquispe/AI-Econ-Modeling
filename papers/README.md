@@ -4,8 +4,9 @@ Open-access copies of the full reading list for *Artificial Intelligence and
 Economic Modeling* (UP, 2026-II), plus the papers the reading-list audit
 recommended adding.
 
-**26 of 28 downloaded** (41 MB), several via the PUCP library proxy. Two remain: one that keeps failing to download and one PUCP does not subscribe
-to. See the last section.
+**28 of 28 obtained** (45 MB), several via the PUCP library proxy. Every paper on the list is now here, two of them as working-paper versions
+rather than the published article — see the notes below. Retrieval routes are
+documented in [`pucp-access.md`](pucp-access.md).
 
 Re-runnable with `./fetch.sh` — it skips files that already exist.
 
@@ -23,7 +24,7 @@ What is versioned is this index and the script.
 | 03 | **Jovanovic & Nyarko** — *The Bayesian Foundations of Learning by Doing* (WP version of *Learning by Doing and the Choice of Technology*, Econometrica 1996) | [NBER w4739](https://www.nber.org/papers/w4739) · [DOI Econometrica](https://doi.org/10.2307/2171832) | `03-…bayesian-foundations-w4739.pdf` · 71 pp |
 | 04 | **Acemoglu & Restrepo (2018)** — *The Race between Man and Machine* | [NBER w22252](https://www.nber.org/papers/w22252) · [DOI AER](https://doi.org/10.1257/aer.20160696) | `04-…race-man-machine.pdf` · 87 pp |
 | 05 | **Agrawal, Gans & Goldfarb (2025)** — *The Economics of Bicycles for the Mind* | [NBER w34034](https://www.nber.org/papers/w34034) · [doi:10.3386/w34034](https://doi.org/10.3386/w34034) | `05-…bicycles-for-the-mind.pdf` · 53 pp |
-| — | **Ganuthula & Singh (2026)** — *The Paradox of Augmentation* | [doi:10.1155/hbe2/8303770](https://doi.org/10.1155/hbe2/8303770) | ⚠ manual download |
+| 06b | **Ganuthula & Singh (2026)** — *The Paradox of Augmentation* | [doi:10.1155/hbe2/8303770](https://doi.org/10.1155/hbe2/8303770) · WP: [SSRN 4974044](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4974044) | `06b-ganuthula-2024-…-wp.pdf` · 26 pp ⚠ |
 
 ## Additions proposed by the audit
 
@@ -54,7 +55,7 @@ What is versioned is this index and the script.
 | 18 | **METR (2025)** — *Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity* | [arXiv:2507.09089](https://arxiv.org/abs/2507.09089) · [blog](https://metr.org/blog/2026-02-24-uplift-update/) | `18-…developer-productivity-rct.pdf` · 51 pp |
 | 19 | **Dell'Acqua et al. (2023)** — *Navigating the Jagged Technological Frontier* | [SSRN 4573321](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) | `19-dellacqua-…jagged-frontier.pdf` · 22 pp |
 | 24 | **Noy & Zhang (2023)**, *Science* 381(6654) | [doi:10.1126/science.adh2586](https://doi.org/10.1126/science.adh2586) | `24-noy-zhang-2023-science.pdf` · 7 pp |
-| — | **Cui, Demirer, Jaffe, Musolff, Peng & Salz (2026)**, *Management Science* | [doi:10.1287/mnsc.2025.00535](https://doi.org/10.1287/mnsc.2025.00535) | 🔒 library access required |
+| 26 | **Cui, Demirer, Jaffe, Musolff, Peng & Salz (2026)**, *Management Science* | [doi:10.1287/mnsc.2025.00535](https://doi.org/10.1287/mnsc.2025.00535) · WP: [SSRN 4945566](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566) | `26-cui-etal-2025-…-wp.pdf` · 38 pp ⚠ |
 
 ## Secondary candidates
 
@@ -95,24 +96,25 @@ when citing:
 Minor: the Acemoglu–Restrepo WP is titled *The Race Between Machine and Man*;
 the AER reversed it to *Man and Machine*.
 
-## Still missing
+## Two are working papers, not the published article
 
-- **Ganuthula & Singh** — https://doi.org/10.1155/hbe2/8303770. PUCP has access
-  and the article is open access (CC-BY), but the download consistently fails
-  from the browser. Open it manually and save the PDF as
-  `06b-ganuthula-singh-2026-paradox-augmentation.pdf`.
-- **Cui, Demirer, Jaffe, Musolff, Peng & Salz (2026)**, *Management Science* —
-  https://doi.org/10.1287/mnsc.2025.00535. **PUCP does not subscribe** to
-  Management Science; the article page shows "Request Access". An earlier
-  working-paper version is on [SSRN 4945566](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566).
+Marked ⚠ in the tables above. The difference is not cosmetic:
+
+- **Ganuthula** — `06b` is SSRN 4974044 (Oct 2024, 26 pp), **single-authored by
+  Ganuthula**. The published version (Wiley, May 2026) adds **Singh** as second
+  author and differs in length. Cite the published one; read this one. The Wiley
+  PDF is open access (CC-BY) and PUCP has access, but the download stalls — grab
+  it by hand from the DOI if the published text matters.
+- **Cui et al.** — `26` is SSRN 4945566 (Aug 2025, 38 pp). PUCP does **not**
+  subscribe to *Management Science*, so the published February 2026 version is
+  out of reach. Numbers quoted in class should come from this version, and be
+  labelled as the working paper.
 
 ## Note on the PUCP library proxy
 
-Six of these PDFs were retrieved through the university proxy, whose host alias
-pattern is `<resource>.pucp.elogim.com` — e.g. `jstor.pucp.elogim.com`,
-`science.pucp.elogim.com`, `wiley.pucp.elogim.com`, `pubsonline.pucp.elogim.com`
-(INFORMS), `aeaweb.pucp.elogim.com`. The session is cookie-based, so `curl` will
-not work; the browser must be logged in.
+Several of these PDFs came through the university proxy. The entry point is
+`https://pucp.elogim.com/auth-meta/login.php?url=<publisher URL>`, and the
+session is cookie-based, so `curl` will not work — the browser must be logged in.
 
-For JSTOR, the direct PDF pattern is
-`https://jstor.pucp.elogim.com/stable/pdf/<DOI>.pdf?acceptTC=1`.
+Which resources PUCP actually reaches, which it does not, and how to get a PDF
+out of Chrome's viewer are all documented in **[`pucp-access.md`](pucp-access.md)**.
