@@ -38,7 +38,8 @@ get  02-quispe-xu-2026-agentic-delegation-language-frontier.pdf          https:/
 copy 03-jovanovic-nyarko-1994-bayesian-foundations-w4739.pdf          jovanovic1996learning.pdf
 copy 04-acemoglu-restrepo-2018-race-man-machine.pdf          acemoglu2018artificial.pdf
 get  05-agrawal-gans-goldfarb-2025-bicycles-for-the-mind.pdf https://www.nber.org/system/files/working_papers/w34034/w34034.pdf
-get  06-ganuthula-singh-2026-paradox-of-augmentation.pdf     https://onlinelibrary.wiley.com/doi/pdfdirect/10.1155/hbe2/8303770
+# 06 Ganuthula & Singh: open access but the download fails; fetch by hand
+#    https://doi.org/10.1155/hbe2/8303770
 
 echo "== Additions proposed by the audit =="
 get  07-acemoglu-kong-ozdaglar-2026-knowledge-collapse.pdf   "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf"
@@ -51,13 +52,13 @@ get  11-chen-meng-2026-ai-levels-playing-field.pdf           https://arxiv.org/p
 get  12-shen-tamkin-2026-ai-skill-formation.pdf              https://arxiv.org/pdf/2601.20245
 copy 13-acemoglu-2024-simple-macroeconomics-of-ai.pdf        acemoglu2025simple.pdf
 copy 14-ide-talamas-2025-ai-knowledge-economy.pdf            idetalamas2025.pdf
-get  15-garicano-2000-hierarchies-knowledge.pdf              https://personal.lse.ac.uk/garicano/hierarchies.pdf
+# 15 Garicano (2000): retrieved via the PUCP proxy, see README
 
 echo "== Empirical session (RCTs cited by the theory) =="
 copy 16-brynjolfsson-li-raymond-2025-generative-ai-at-work.pdf brynjolfsson2024generative.pdf
 copy 17-peng-et-al-2023-copilot-rct.pdf                        peng2023impact.pdf
 get  18-metr-2025-developer-productivity-rct.pdf               https://arxiv.org/pdf/2507.09089
-get  19-dellacqua-et-al-2023-jagged-frontier.pdf               https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7282.pdf
+# 19 Dell'Acqua et al.: download from SSRN 4573321 in a browser
 
 echo "== Secondary candidates =="
 copy 20-gans-goldfarb-2026-o-ring-automation.pdf             gans2026oring.pdf

@@ -4,9 +4,8 @@ Open-access copies of the full reading list for *Artificial Intelligence and
 Economic Modeling* (UP, 2026-II), plus the papers the reading-list audit
 recommended adding.
 
-**20 of 23 downloaded** (23 MB). The remaining three have open copies only on
-SSRN or Wiley, which block automated downloads: fetch them by hand from the
-links in the last section.
+**26 of 28 downloaded** (41 MB), several via the PUCP library proxy. Two remain: one that keeps failing to download and one PUCP does not subscribe
+to. See the last section.
 
 Re-runnable with `./fetch.sh` — it skips files that already exist.
 
@@ -24,7 +23,7 @@ What is versioned is this index and the script.
 | 03 | **Jovanovic & Nyarko** — *The Bayesian Foundations of Learning by Doing* (WP version of *Learning by Doing and the Choice of Technology*, Econometrica 1996) | [NBER w4739](https://www.nber.org/papers/w4739) · [DOI Econometrica](https://doi.org/10.2307/2171832) | `03-…bayesian-foundations-w4739.pdf` · 71 pp |
 | 04 | **Acemoglu & Restrepo (2018)** — *The Race between Man and Machine* | [NBER w22252](https://www.nber.org/papers/w22252) · [DOI AER](https://doi.org/10.1257/aer.20160696) | `04-…race-man-machine.pdf` · 87 pp |
 | 05 | **Agrawal, Gans & Goldfarb (2025)** — *The Economics of Bicycles for the Mind* | [NBER w34034](https://www.nber.org/papers/w34034) · [doi:10.3386/w34034](https://doi.org/10.3386/w34034) | `05-…bicycles-for-the-mind.pdf` · 53 pp |
-| 06 | **Ganuthula & Singh (2026)** — *The Paradox of Augmentation* | [doi:10.1155/hbe2/8303770](https://doi.org/10.1155/hbe2/8303770) | ⚠ manual download |
+| — | **Ganuthula & Singh (2026)** — *The Paradox of Augmentation* | [doi:10.1155/hbe2/8303770](https://doi.org/10.1155/hbe2/8303770) | ⚠ manual download |
 
 ## Additions proposed by the audit
 
@@ -34,7 +33,7 @@ What is versioned is this index and the script.
 | 08 | **Yin, Su & Li (2026)** — *Overcoming the Incentive Collapse Paradox* (ICML 2026) | [arXiv:2603.27049](https://arxiv.org/abs/2603.27049) | `08-…incentive-collapse-paradox.pdf` · 23 pp |
 | 09 | **Saig et al. (2026)** — *Adaptive Contracts for Cost-Effective AI Delegation* | [arXiv:2603.17212](https://arxiv.org/abs/2603.17212) | `09-…ai-delegation.pdf` · 33 pp |
 | 10 | *The Human-AI Delegation-Verification Dilemma* (2026) | [arXiv:2605.21351](https://arxiv.org/abs/2605.21351) | `10-…delegation-verification-dilemma.pdf` · 27 pp |
-| — | **Bastani & Cachon** — *The Human-AI Contracting Paradox* | [SSRN 5962739](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5962739) · [doi:10.2139/ssrn.5962739](https://doi.org/10.2139/ssrn.5962739) | ⚠ manual download |
+| 06 | **Bastani & Cachon** — *The Human-AI Contracting Paradox* | [SSRN 5962739](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5962739) · [doi:10.2139/ssrn.5962739](https://doi.org/10.2139/ssrn.5962739) | `06-…contracting-paradox.pdf` · 36 pp |
 
 ## Supplementary readings
 
@@ -44,7 +43,7 @@ What is versioned is this index and the script.
 | 12 | **Shen & Tamkin (2026)** — *How AI Impacts Skill Formation* | [arXiv:2601.20245](https://arxiv.org/abs/2601.20245) | `12-…skill-formation.pdf` · 31 pp |
 | 13 | **Acemoglu (2024)** — *The Simple Macroeconomics of AI* | [NBER w32487](https://www.nber.org/papers/w32487) | `13-…simple-macroeconomics.pdf` · 58 pp |
 | 14 | **Ide & Talamàs (2025)** — *Artificial Intelligence in the Knowledge Economy*, JPE 133(12) | [arXiv:2312.05481](https://arxiv.org/abs/2312.05481) · [doi:10.1086/737233](https://doi.org/10.1086/737233) | `14-…knowledge-economy.pdf` · 39 pp |
-| 15 | **Garicano (2000)** — *Hierarchies and the Organization of Knowledge in Production*, JPE 108(5) | [doi:10.1086/317671](https://doi.org/10.1086/317671) · [SSRN 241055](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=241055) | ⚠ manual download |
+| 15 | **Garicano (2000)** — *Hierarchies and the Organization of Knowledge in Production*, JPE 108(5) | [doi:10.1086/317671](https://doi.org/10.1086/317671) | `15-garicano-2000-…pdf` · 32 pp |
 
 ## Empirical session — the RCTs the theory cites
 
@@ -53,9 +52,9 @@ What is versioned is this index and the script.
 | 16 | **Brynjolfsson, Li & Raymond (2025)** — *Generative AI at Work*, QJE 140(2) | [NBER w31161](https://www.nber.org/papers/w31161) · [DOI QJE](https://doi.org/10.1093/qje/qjae044) | `16-…generative-ai-at-work.pdf` · 67 pp |
 | 17 | **Peng, Kalliamvakou, Cihon & Demirer (2023)** — GitHub Copilot RCT | [arXiv:2302.06590](https://arxiv.org/abs/2302.06590) | `17-…copilot-rct.pdf` · 19 pp |
 | 18 | **METR (2025)** — *Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity* | [arXiv:2507.09089](https://arxiv.org/abs/2507.09089) · [blog](https://metr.org/blog/2026-02-24-uplift-update/) | `18-…developer-productivity-rct.pdf` · 51 pp |
-| 19 | **Dell'Acqua et al. (2023)** — *Navigating the Jagged Technological Frontier* | [SSRN 4573321](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) · [HBS WP 24-013](https://www.hbs.edu/faculty/Pages/item.aspx?num=64700) | ⚠ manual download |
-| — | **Noy & Zhang (2023)**, *Science* 381(6654) | [doi:10.1126/science.adh2586](https://doi.org/10.1126/science.adh2586) | 🔒 library access required |
-| — | **Cui et al. (2025)**, *Management Science* | [DOI](https://doi.org/10.1287/mnsc.2023.01584) | 🔒 library access required |
+| 19 | **Dell'Acqua et al. (2023)** — *Navigating the Jagged Technological Frontier* | [SSRN 4573321](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) | `19-dellacqua-…jagged-frontier.pdf` · 22 pp |
+| 24 | **Noy & Zhang (2023)**, *Science* 381(6654) | [doi:10.1126/science.adh2586](https://doi.org/10.1126/science.adh2586) | `24-noy-zhang-2023-science.pdf` · 7 pp |
+| — | **Cui, Demirer, Jaffe, Musolff, Peng & Salz (2026)**, *Management Science* | [doi:10.1287/mnsc.2025.00535](https://doi.org/10.1287/mnsc.2025.00535) | 🔒 library access required |
 
 ## Secondary candidates
 
@@ -64,7 +63,7 @@ What is versioned is this index and the script.
 | 20 | **Gans & Goldfarb (2026)** — *O-Ring Automation* | [NBER w34639](https://www.nber.org/papers/w34639) | `20-…o-ring-automation.pdf` · 26 pp |
 | 21 | **Catalini, Hui & Wu (2026)** — *Some Simple Economics of AGI* | [arXiv:2602.20946](https://arxiv.org/abs/2602.20946) | `21-…simple-economics-of-agi.pdf` · 113 pp |
 | 22 | *When the Scaffold Stays On: AI, Practice Style, and Screening in Elite Skill Formation* (2026) | [arXiv:2606.06253](https://arxiv.org/abs/2606.06253) | `22-…scaffold-stays-on.pdf` · 61 pp |
-| — | **Wong** — extensión de atención endógena a Bastani–Cachon | [SSRN 6039135](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6039135) | ⚠ manual download |
+| 25 | **Wong (2026)** — *The Collapse of Supervision: Time, Attention, and Institutional Failure in Human–AI Systems* | [SSRN 6039135](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6039135) | `25-wong-2026-collapse-of-supervision.pdf` · 13 pp |
 
 ## Generative AI in economic research
 
@@ -96,16 +95,24 @@ when citing:
 Minor: the Acemoglu–Restrepo WP is titled *The Race Between Machine and Man*;
 the AER reversed it to *Man and Machine*.
 
-## Manual download required
+## Still missing
 
-SSRN and Wiley return `HTTP 403` to any automated download, so these five must
-be opened in a browser:
+- **Ganuthula & Singh** — https://doi.org/10.1155/hbe2/8303770. PUCP has access
+  and the article is open access (CC-BY), but the download consistently fails
+  from the browser. Open it manually and save the PDF as
+  `06b-ganuthula-singh-2026-paradox-augmentation.pdf`.
+- **Cui, Demirer, Jaffe, Musolff, Peng & Salz (2026)**, *Management Science* —
+  https://doi.org/10.1287/mnsc.2025.00535. **PUCP does not subscribe** to
+  Management Science; the article page shows "Request Access". An earlier
+  working-paper version is on [SSRN 4945566](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566).
 
-1. Ganuthula & Singh — https://doi.org/10.1155/hbe2/8303770 (open access, CC-BY)
-2. Bastani & Cachon — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5962739
-3. Garicano (2000) — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=241055
-4. Dell'Acqua et al. — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321
-5. Wong — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6039135
+## Note on the PUCP library proxy
 
-And two require UP institutional access: Noy & Zhang (*Science*) and Cui et al.
-(*Management Science*).
+Six of these PDFs were retrieved through the university proxy, whose host alias
+pattern is `<resource>.pucp.elogim.com` — e.g. `jstor.pucp.elogim.com`,
+`science.pucp.elogim.com`, `wiley.pucp.elogim.com`, `pubsonline.pucp.elogim.com`
+(INFORMS), `aeaweb.pucp.elogim.com`. The session is cookie-based, so `curl` will
+not work; the browser must be logged in.
+
+For JSTOR, the direct PDF pattern is
+`https://jstor.pucp.elogim.com/stable/pdf/<DOI>.pdf?acceptTC=1`.
