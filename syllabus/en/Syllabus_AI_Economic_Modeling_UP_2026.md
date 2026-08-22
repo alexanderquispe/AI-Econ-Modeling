@@ -145,11 +145,11 @@ It comprises two deliverables: the **average of the six weekly repositories**, w
 - **A new GitHub repository for each designated paper.** There are six paper weeks, so by the end of the term each student has **at least six repositories**.
 - **Deadline: Tuesdays at 22:00.** Work follows the branch, *pull request*, and merge cycle covered in the first sessions: nothing is written directly to `main`.
 - **Everyone registers their repository link each week**, whether or not they are drawn in the lottery, in the shared course file. The repository URL suffices. A repository that exists but is not registered counts as not submitted.
-- **Minimum contents:** a one-page `README.md` with the agent's problem and the main result with its conditions; a `prompts.md` with the LLM queries and their unedited answers; a `mano/` folder with at least one photograph of a derivation done by hand; and the **Beamer presentation**, with its LaTeX source and its PDF. Above that floor, content is free: extensions, simulations, limiting cases, or whatever the paper suggests.
+- **Minimum contents:** a one-page `README.md` with the agent's problem and the main result with its conditions; a `prompts.md` with the LLM queries and their unedited answers; a `hand/` folder with at least one photograph of a derivation done by hand; and the **Beamer presentation**, with its LaTeX source and its PDF. Above that floor, content is free: extensions, simulations, limiting cases, or whatever the paper suggests.
 
 **On the weekly handwritten derivation.** Students are not asked to derive the whole paper by hand, but to show **at least one place where they did not believe the machine and checked it themselves**: the step the model got wrong, the one they did not understand until they did it, or the one that seemed too easy to be true. A photograph taken with a phone is enough.
 
-The operational detail —folder structure, naming convention, pull-request workflow, and a set of starter *prompts*— is in the [Course Repository Guide](../guia-del-repositorio.md), distributed in the first week.
+The operational detail —folder structure, naming convention, pull-request workflow, and a set of starter *prompts*— is in the [Course Repository Guide](../repository-guide.md), distributed in the first week.
 
 #### Topic presentation (10 %)
 

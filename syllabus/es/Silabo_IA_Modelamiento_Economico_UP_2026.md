@@ -168,12 +168,12 @@ La exposición oral **no se prepara aparte: se califica sobre el repositorio de 
 - **Un repositorio nuevo en GitHub por cada artículo designado.** Son seis semanas de artículos, de modo que al terminar el semestre cada estudiante tiene **al menos seis repositorios**.
 - **Plazo: martes a las 22:00.** El trabajo se hace por el ciclo de rama, *pull request* y fusión visto en las primeras sesiones: nada se escribe directo en `main`. El PR debe estar **fusionado** antes de esa hora, y la hora de fusión es lo que se mira.
 - **Todas y todos registran el enlace de su repositorio cada semana**, resulten sorteados o no, en el archivo compartido del curso. Basta la URL del repositorio. Un repositorio que existe pero no está registrado cuenta como no entregado.
-- **Contenido mínimo:** un `README.md` de una página con el problema del agente y el resultado principal con sus condiciones; un `prompts.md` con las consultas al LLM y sus respuestas sin editar; una carpeta `mano/` con al menos una fotografía de una derivación hecha a mano; y la **presentación en Beamer**, con su fuente LaTeX y su PDF. Por encima de ese piso, el contenido es libre: extensiones, simulaciones, casos límite o lo que el artículo sugiera.
+- **Contenido mínimo:** un `README.md` de una página con el problema del agente y el resultado principal con sus condiciones; un `prompts.md` con las consultas al LLM y sus respuestas sin editar; una carpeta `hand/` con al menos una fotografía de una derivación hecha a mano; y la **presentación en Beamer**, con su fuente LaTeX y su PDF. Por encima de ese piso, el contenido es libre: extensiones, simulaciones, casos límite o lo que el artículo sugiera.
 - **Si el repositorio de esa semana no está entregado y registrado al cierre del martes, el control de lectura se califica con cero**, con independencia de la calidad de la exposición.
 
 **Sobre la derivación a mano.** No se pide derivar el artículo completo, sino que exista **al menos un lugar donde no se le creyó a la máquina y se comprobó a mano**: el paso que el modelo hizo mal, el que no se entendió hasta hacerlo, o el que pareció demasiado fácil para ser cierto. Una fotografía tomada con el teléfono es suficiente; no hay que escanear ni pasar en limpio.
 
-El detalle operativo —estructura de carpetas, convención de nombres, flujo de *pull requests* y una batería de *prompts* para empezar— está en la [Guía de los repositorios del curso](../guia-del-repositorio.md), que se entrega en la primera semana.
+El detalle operativo —estructura de carpetas, convención de nombres, flujo de *pull requests* y una batería de *prompts* para empezar— está en la [Course Repository Guide](../repository-guide.md), que se entrega en la primera semana. **El material del curso está en inglés**; esta versión en español del sílabo se provee para el Departamento de Economía.
 
 #### Exposición del tema (10 %)
 

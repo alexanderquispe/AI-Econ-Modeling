@@ -1,131 +1,133 @@
-# Inteligencia Artificial y Modelamiento Económico
+# Artificial Intelligence and Economic Modeling
 
-**Universidad del Pacífico · Facultad de Economía · Semestre 2026-II**
-Profesor: **Alexander Quispe Rojas** · Sesiones: **miércoles y viernes**, virtual por Zoom
+**Universidad del Pacífico · School of Economics · Term 2026-II**
+Instructor: **Alexander Quispe Rojas** · Sessions: **Wednesdays and Fridays**, online via Zoom
 
-🌐 **[Sitio del curso](https://alexanderquispe.github.io/AI-Econ-Modeling/)** · 📄 **[Sílabo (PDF)](syllabus/es/Silabo_IA_Modelamiento_Economico_UP_2026.pdf)** · 📘 **[Guía de repositorios](syllabus/guia-del-repositorio.md)** · 📥 **[Papers](papers/)** · ✅ **[Tareas](https://github.com/alexanderquispe/AI-Econ-Modeling/issues)**
+🌐 **[Course website](https://alexanderquispe.github.io/AI-Econ-Modeling/)** · 📄 **[Syllabus (PDF)](syllabus/en/Syllabus_AI_Economic_Modeling_UP_2026.pdf)** · 📘 **[Repository guide](syllabus/repository-guide.md)** · 📥 **[Papers](papers/)** · ✅ **[Assignments](https://github.com/alexanderquispe/AI-Econ-Modeling/issues)**
+
+> **The working language of this course is English.** A Spanish version of the syllabus is kept in [`syllabus/es/`](syllabus/es/) because the School of Economics requires one; everything else — assignments, slides, the guide, and your repositories — is in English.
 
 ---
 
-## De qué va el curso
+## What the course is about
 
-Se leen artículos de teoría económica sobre la interacción humano–IA, se **rederiva** su resultado principal y se **extiende** relajando un supuesto. Los modelos de lenguaje se usan como **asistentes de demostración** —no como tema de estudio— y el estudiante conserva siempre la última palabra sobre lo que la máquina propone.
+We read economic theory papers on human–AI interaction, **re-derive** their main result, and **extend** them by relaxing one assumption. Language models are used as **proof assistants** — not as the subject of study — and the student always has the last word on what the machine proposes.
 
-No hay examen parcial ni final escritos. Cada estudiante termina el semestre con una pieza propia: una extensión formal de un artículo del curso, o el modelo económico que sostiene su tesis.
+There is no written midterm or final exam. Every student ends the term with a piece of their own: a formal extension of a course paper, or the economic model underpinning their thesis.
 
-**La secuencia está ordenada por dificultad matemática creciente**, no por mecanismo económico: cada sesión introduce exactamente la técnica que ese artículo necesita y ninguna exige una herramienta que no se haya usado antes.
+**The sequence is ordered by increasing mathematical difficulty**, not by economic mechanism: each session introduces exactly the technique that paper requires, and none demands a tool that has not been used before.
 
-## Fechas clave
+## Key dates
 
 | | |
 |---|---|
-| Inicio de clases | lunes **10 de agosto de 2026** |
-| Artículos del profesor | **19 de agosto – 25 de setiembre** (sesiones 1–12) |
-| Exámenes parciales (sin clases) | 28 de setiembre – 3 de octubre |
-| Exposición del tema | **7 – 16 de octubre** (sesiones 13–16) |
-| Taller | 21 y 23 de octubre (sesiones 17–18) |
-| Presentaciones finales | **28 de octubre – 20 de noviembre** (sesiones 19–26) |
-| Último día de clases | sábado **21 de noviembre** |
-| Entrega del trabajo final | **23 – 29 de noviembre** |
+| First day of classes | Monday, **August 10, 2026** |
+| Instructor's papers | **August 19 – September 25** (sessions 1–12) |
+| Midterm exams (no classes) | September 28 – October 3 |
+| Topic presentations | **October 7 – 16** (sessions 13–16) |
+| Workshop | October 21 and 23 (sessions 17–18) |
+| Final presentations | **October 28 – November 20** (sessions 19–26) |
+| Last day of classes | Saturday, **November 21** |
+| Final paper due | **November 23 – 29** |
 
-> ⏰ **Los repositorios semanales vencen los martes a las 22:00.** Ningún feriado del semestre cae en miércoles o viernes.
+> ⏰ **Weekly repositories are due Tuesdays at 22:00.** No holiday in the term falls on a Wednesday or a Friday.
 
-## Cronograma
+## Schedule
 
-| # | Fecha | Tema | Evaluación |
+| # | Date | Topic | Assessment |
 |---|---|---|---|
-| — | mié 12 ago | Introducción. Git y GitHub; credenciales | |
-| — | vie 14 ago | Editor con LaTeX; CLI de agentes; SymPy | |
-| 1 | mié 19 ago | Aouad–Lykouris–Zhong §2 — Prop. 2.1: máximo cóncavo, interior vs. esquina | Control lect. |
-| 2 | vie 21 ago | ALZ §§3–5 — las tres paradojas, sin demostrar | Control lect. |
-| 3 | mié 26 ago | **Agrawal–Gans–Goldfarb I** — Props. 1–2: CPO y teorema de la envolvente | Control lect. |
-| 4 | vie 28 ago | AGG II — Prop. 3: álgebra de varianzas; la U condicional | Control lect. |
-| 5 | mié 2 set | Jovanovic–Nyarko §IV — trayectorias miopes; Normal–Normal en precisiones | Control lect. |
-| 6 | vie 4 set | Quispe & Xu (2026) — de un modelo a una predicción contrastable | Control lect. |
-| 7 | mié 9 set | Acemoglu–Kong–Ozdaglar — derivadas cruzadas; colapso de conocimiento | Control lect. |
-| 8 | vie 11 set | Bastani & Cachon — paradoja del contrato: riesgo moral | Control lect. |
-| 9 | mié 16 set | Yin, Su & Li — auditoría con centinelas | Control lect. |
-| 10 | vie 18 set | Ide & Talamàs (JPE 2025) — autonomía y capacidad | Control lect. |
-| 11 | mié 23 set | Acemoglu & Restrepo (2018) — continuo de tareas | Control lect. |
-| 12 | vie 25 set | Sesión empírica — Brynjolfsson, Peng, METR, Dell'Acqua | Control lect. |
-| — | 28 set – 3 oct | *Exámenes parciales — sin clases* | |
-| 13–16 | 7 – 16 oct | Exposición del tema · cuatro por sesión, 20 min c/u | Exp. tema |
-| 17–18 | 21 y 23 oct | Taller sobre el proyecto propio | |
-| 19–26 | 28 oct – 20 nov | Presentaciones finales · dos por sesión | Present. final |
-| — | 23–29 nov | Cierre del semestre | Trabajo final |
+| — | Wed Aug 12 | Introduction. Git and GitHub; credentials | |
+| — | Fri Aug 14 | Editor with LaTeX; AI agent CLI; SymPy | |
+| 1 | Wed Aug 19 | Aouad–Lykouris–Zhong §2 — Prop. 2.1: concave maximum, interior vs. corner | Reading ck. |
+| 2 | Fri Aug 21 | ALZ §§3–5 — the three paradoxes, stated without proof | Reading ck. |
+| 3 | Wed Aug 26 | **Agrawal–Gans–Goldfarb I** — Props. 1–2: FOC and envelope theorem | Reading ck. |
+| 4 | Fri Aug 28 | AGG II — Prop. 3: variance algebra; the conditional U-shape | Reading ck. |
+| 5 | Wed Sep 2 | Jovanovic–Nyarko §IV — myopic paths; Normal–Normal in precisions | Reading ck. |
+| 6 | Fri Sep 4 | Quispe & Xu (2026) — from a model to a testable prediction | Reading ck. |
+| 7 | Wed Sep 9 | Acemoglu–Kong–Ozdaglar — cross-partials; knowledge collapse | Reading ck. |
+| 8 | Fri Sep 11 | Bastani & Cachon — the contracting paradox: moral hazard | Reading ck. |
+| 9 | Wed Sep 16 | Yin, Su & Li — sentinel auditing | Reading ck. |
+| 10 | Fri Sep 18 | Ide & Talamàs (JPE 2025) — autonomy and capability | Reading ck. |
+| 11 | Wed Sep 23 | Acemoglu & Restrepo (2018) — continuum of tasks | Reading ck. |
+| 12 | Fri Sep 25 | Empirical session — Brynjolfsson, Peng, METR, Dell'Acqua | Reading ck. |
+| — | Sep 28 – Oct 3 | *Midterm exams — no classes* | |
+| 13–16 | Oct 7 – 16 | Topic presentations · four per session, 20 min each | Topic pres. |
+| 17–18 | Oct 21 and 23 | Workshop on the student's own project | |
+| 19–26 | Oct 28 – Nov 20 | Final presentations · two per session | Final pres. |
+| — | Nov 23–29 | Close of term | Final paper |
 
-## Evaluación
+## Assessment
 
-Los rubros usan la nomenclatura del sistema de notas de la Universidad.
+The categories use the nomenclature of the University's grading system.
 
-| Rubro | Qué comprende | Peso |
+| Category | What it covers | Weight |
 |---|---|---|
-| **Trabajo final** | Documento de 6–8 páginas más anexo manuscrito | 30 % |
-| **Presentación final** | Exposición del trabajo, 28 oct – 20 nov | 30 % |
-| **Promedio de trabajos** | Los seis repositorios semanales (20) y la exposición del tema (10) | 30 % |
-| **Control de lectura** | Examen oral de 5 minutos por sorteo | 10 % |
+| **Final paper** | A 6–8 page document plus a handwritten appendix | 30 % |
+| **Final presentation** | Presentation of the work, Oct 28 – Nov 20 | 30 % |
+| **Coursework average** | The six weekly repositories (20) and the topic presentation (10) | 30 % |
+| **Reading check** | Five-minute oral exam, by lottery | 10 % |
 
-## Cómo funciona la semana
+## How the week works
 
-1. **Viernes:** el profesor anuncia el artículo designado de la semana siguiente.
-2. **Fin de semana y lunes:** se lee el artículo y se trabaja el repositorio.
-3. **Martes 22:00:** vence el repositorio (rama → *pull request* → merge) y se registra su enlace.
-4. **Miércoles y viernes:** cada sesión abre con el sorteo del control de lectura.
+1. **Friday:** the instructor announces next week's designated paper.
+2. **Weekend and Monday:** read the paper and build the repository.
+3. **Tuesday 22:00:** the repository is due (branch → pull request → merge) and its link registered.
+4. **Wednesday and Friday:** each session opens with the reading-check draw.
 
-Cada artículo designado tiene **su propio repositorio nuevo** en GitHub, con `README.md`, `prompts.md`, una carpeta `mano/` con al menos una derivación fotografiada, y la presentación en Beamer. Todo el detalle está en la **[guía de repositorios](syllabus/guia-del-repositorio.md)**.
+Every designated paper gets **its own new repository** on GitHub, with `README.md`, `prompts.md`, a `hand/` folder holding at least one photographed derivation, and the Beamer deck. Full detail in the **[repository guide](syllabus/repository-guide.md)**.
 
-## Qué hay en este repositorio
+## What is in this repository
 
 ```
-├── docs/                  sitio del curso (GitHub Pages)
-├── papers/                los 20 PDF de lectura + índice con enlaces + fetch.sh
+├── docs/                  course website (GitHub Pages)
+├── papers/                the 20 reading PDFs + index with links + fetch.sh
 ├── syllabus/
-│   ├── es/                sílabo en español (tex · md · pdf)
 │   ├── en/                syllabus in English (tex · md · pdf)
-│   ├── guia-del-repositorio.md
-│   └── build.sh           recompila ambos PDF con Tectonic
+│   ├── es/                Spanish version, for the School of Economics
+│   ├── repository-guide.md
+│   └── build.sh           rebuilds both PDFs with Tectonic
 └── README.md
 ```
 
-Los PDF de los papers están en `.gitignore`: se descargan con `./papers/fetch.sh`, que salta los que ya existen. Cinco requieren descarga manual desde SSRN o Wiley; los enlaces están en [`papers/README.md`](papers/README.md).
+The paper PDFs are in `.gitignore`: fetch them with `./papers/fetch.sh`, which skips the ones already present. Five need manual download from SSRN or Wiley; links are in [`papers/README.md`](papers/README.md).
 
 ---
 
-## Notas de diseño del curso
+## Course design notes
 
-Lo que sigue es el razonamiento detrás del temario, no material para estudiantes.
+What follows is the reasoning behind the reading list, not material for students.
 
-### El orden por dificultad, y por qué
+### The difficulty ordering, and why
 
-Una auditoría de la bibliografía (verificación adversarial contra fuentes primarias) encontró que agrupar por mecanismo económico había producido dos defectos: un módulo cuyo paper no contiene ninguna proposición —y por tanto no admite la consigna de rederivar y extender— y el modelo formal más fácil de la lista programado diez semanas después de la sesión que enseñaba la herramienta que usa.
+An audit of the bibliography (adversarial verification against primary sources) found that grouping by economic mechanism had produced two defects: a module whose paper contains no proposition at all — and therefore cannot support the re-derive-and-extend assignment — and the easiest complete formal model on the list scheduled ten weeks after the session teaching the tool it uses.
 
-La escalera verificada es: ALZ Prop. 2.1 (caso interior vs. esquina, sin cálculo) → Agrawal–Gans–Goldfarb Props. 1–2 (CPO + envolvente + serie geométrica) → AGG Prop. 3 (álgebra de varianzas) → Jovanovic–Nyarko §IV y Quispe & Xu (Normal–Normal en precisiones) → Acemoglu–Kong–Ozdaglar (esa misma CPO dentro de una recursión de precisiones, más Topkis) → Bastani–Cachon (riesgo moral) → Ide–Talamàs y Acemoglu–Restrepo (asignación y continuo de tareas).
+The verified ladder is: ALZ Prop. 2.1 (interior vs. corner case split, no calculus) → Agrawal–Gans–Goldfarb Props. 1–2 (FOC + envelope + geometric series) → AGG Prop. 3 (variance algebra) → Jovanovic–Nyarko §IV and Quispe & Xu (Normal–Normal in precisions) → Acemoglu–Kong–Ozdaglar (that same FOC inside a precision recursion, plus Topkis) → Bastani–Cachon (moral hazard) → Ide–Talamàs and Acemoglu–Restrepo (assignment and continuum of tasks).
 
-El orden coincide con un arco dialéctico —sustitución estática pesimista → complementariedad del juicio → frontera bayesiana → colapso de conocimiento → imposibilidad contractual → giro de signo por autonomía— así que no se sacrifica narrativa.
+The ordering coincides with a dialectical arc — pessimistic static substitution → judgment complementarity → Bayesian frontier → knowledge collapse → contracting impossibility → autonomy sign-flip — so no narrative is sacrificed.
 
-### Supuestos relajables, por artículo
+### Relaxable assumptions, paper by paper
 
-El filtro real del curso: un artículo solo sirve si un estudiante puede relajar *un* supuesto y rederivar la proposición en pocas páginas.
+The course's real filter: a paper is only usable if a student can relax *one* assumption and re-derive the proposition in a few pages.
 
-| Artículo | Supuesto a relajar | Advertencia |
+| Paper | Assumption to relax | Warning |
 |---|---|---|
-| **ALZ** | La **miopía** (agente a dos periodos), o complementariedad dentro de la primitiva `p(·)` | No asignar «costo lineal → convexo»: los autores ya lo hicieron en el Apéndice D |
-| **Agrawal–Gans–Goldfarb** | Condiciones de curvatura que **firmen el signo** de `p(se*(1);1) − p(se*(0);0)` | La forma funcional del paper está justo sobre el filo de la igualdad |
-| **Acemoglu–Kong–Ozdaglar** | Supuesto 1: `Δ_I = 0 → Δ_I > 0`. Ataca el Lema 2 y la Prop. 5 | Acotar al estado de colapso: el propio paper avisa que se rompe el argumento de convexidad |
-| **Bastani–Cachon** | Pago contingente a resultado → auditoría aleatoria | Ya publicado (Yin–Su–Li, ICML 2026): sirve como ejercicio de auditar a la IA, no de descubrir |
+| **ALZ** | **Myopia** (a two-period agent), or complementarity inside the primitive `p(·)` | Do not assign "linear → convex cost": the authors already did it in Appendix D |
+| **Agrawal–Gans–Goldfarb** | Curvature conditions that **sign** `p(se*(1);1) − p(se*(0);0)` | The paper's functional form sits exactly on the knife edge of equality |
+| **Acemoglu–Kong–Ozdaglar** | Assumption 1: `Δ_I = 0 → Δ_I > 0`. Attacks Lemma 2 and Prop. 5 | Scope it to the collapse state: the paper warns the convexity argument breaks |
+| **Bastani–Cachon** | Output-contingent pay → random auditing | Already published (Yin–Su–Li, ICML 2026): useful as an audit-the-AI exercise, not a discovery one |
 
-### Erratas corregidas en la bibliografía
+### Citation errata corrected
 
-Cuatro citas del sílabo original estaban mal y se verificaron contra Crossref, NBER y arXiv:
+Four citations in the original syllabus were wrong and were verified against Crossref, NBER, and arXiv:
 
-- Agrawal–Gans–Goldfarb **no** se titula *Variance, Judgment, and the Value of AI Predictions* ni está en arXiv: es *The Economics of Bicycles for the Mind*, NBER WP 34034.
-- «Ganuthula & Kumar» es en realidad **Ganuthula & Singh** (Kumar es nombre de pila).
-- Ide & Talam**à**s (2025), publicado en *JPE* 133(12), no un WP de 2024.
-- `arXiv:2605.25438` no se titula *Coding Beyond Your Training*: la versión vigente es **Quispe & Xu**, *Agentic Delegation and the Language Frontier of Software Developers*.
+- Agrawal–Gans–Goldfarb is **not** titled *Variance, Judgment, and the Value of AI Predictions* and is not on arXiv: it is *The Economics of Bicycles for the Mind*, NBER WP 34034.
+- "Ganuthula & Kumar" is in fact **Ganuthula & Singh** (Kumar is a given name).
+- Ide & Talam**à**s (2025), published in *JPE* 133(12), not a 2024 working paper.
+- `arXiv:2605.25438` is not titled *Coding Beyond Your Training*: the current version is **Quispe & Xu**, *Agentic Delegation and the Language Frontier of Software Developers*.
 
-**Cinco de las lecturas centrales son preprints sin arbitraje**, en revisión activa. Se leen por estar en la frontera, y verificar el estatus editorial de lo que uno cita es parte explícita del oficio que el curso enseña.
+**Five of the core readings are unrefereed preprints** under active revision. They are read because they sit at the frontier, and verifying the editorial status of what one cites is an explicit part of the craft this course teaches.
 
-## Referencias clave
+## Key references
 
 - Aouad, A., Lykouris, T., & Zhong, H. (2026). *Human-AI Productivity Paradoxes.* [arXiv:2605.11350](https://arxiv.org/abs/2605.11350)
 - Agrawal, A., Gans, J., & Goldfarb, A. (2025). *The Economics of Bicycles for the Mind.* [NBER w34034](https://doi.org/10.3386/w34034)
@@ -133,6 +135,6 @@ Cuatro citas del sílabo original estaban mal y se verificaron contra Crossref, 
 - Ide, E., & Talamàs, E. (2025). *Artificial Intelligence in the Knowledge Economy.* [JPE 133(12)](https://doi.org/10.1086/737233)
 - Quispe, A., & Xu, K. (2026). *Agentic Delegation and the Language Frontier of Software Developers.* [arXiv:2605.25438](https://arxiv.org/abs/2605.25438)
 
-## Licencia
+## License
 
 [MIT](LICENSE)
