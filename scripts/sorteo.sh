@@ -11,7 +11,7 @@ cd "$(dirname "$0")/.."
 K=${1:-1}
 ROSTER=scripts/roster.txt
 USED=scripts/.sorteo-usados
-[ -f "$ROSTER" ] || { echo "falta $ROSTER (un usuario de GitHub por línea)"; exit 1; }
+[ -f "$ROSTER" ] || { echo "falta $ROSTER — cópialo de scripts/roster.example.txt"; exit 1; }
 touch "$USED"
 python3 - "$K" "$ROSTER" "$USED" <<'PY'
 import sys, random, os

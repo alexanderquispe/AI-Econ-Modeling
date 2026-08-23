@@ -1,0 +1,13 @@
+# Plantilla. Copia este archivo a scripts/roster.txt y complétalo.
+#
+#   cp scripts/roster.example.txt scripts/roster.txt
+#
+# Un usuario de GitHub por línea — NO nombres completos. El archivo real
+# (scripts/roster.txt) está en .gitignore y nunca se sube: este repositorio es
+# público y la lista de matriculados es dato personal de tus estudiantes.
+#
+# Si necesitas guardar la correspondencia nombre ↔ usuario, hazlo en un archivo
+# aparte fuera del repositorio.
+
+# usuario-github-1
+# usuario-github-2

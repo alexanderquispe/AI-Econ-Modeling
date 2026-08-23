@@ -1,2 +1,0 @@
-# Un usuario de GitHub por línea. Reemplaza estos ejemplos por los 16 reales.
-# Sirve para ./entregas.sh (quién falta) y ./sorteo.sh (control de lectura).
