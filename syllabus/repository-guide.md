@@ -14,7 +14,7 @@ When the draw calls on you, you present from that week's repository.
 |---|---|
 | **One repository per designated paper** | Six minimum by the end of the term |
 | **Deadline: Tuesday 22:00** | The pull request must be merged before that hour |
-| **Everyone registers their repo link** | In the shared spreadsheet, whether or not you are drawn |
+| **Everyone posts their repo link** | As a comment on that week's issue, whether or not you are drawn |
 | **Branch → PR → merge** | Nothing is written directly to `main` |
 
 ---
@@ -44,7 +44,7 @@ This is the cycle we covered in the first sessions. **Nothing is written directl
 4. **Open the Pull Request** from `analysis` against `main`. In the PR description, write three lines on what you found.
 5. **Merge the PR** before **Tuesday 22:00**.
 
-The merge time is what counts for the deadline, so do not leave it to the last minute. In the spreadsheet you only register the repository URL: the pull request need not be reported, but the workflow must still be followed.
+The merge time is what counts for the deadline, so do not leave it to the last minute. You only post the repository URL: the pull request need not be reported, but the workflow must still be followed.
 
 ---
 
@@ -144,20 +144,30 @@ Starting points, not a script. They all aim at the same thing: **getting answers
 
 ---
 
-## 8. Registering in the spreadsheet
+## 8. Posting your link
 
-**Whether or not you are drawn, everyone registers the link every week.** The shared spreadsheet has one row per student and week:
+**Whether or not you are drawn, everyone posts the link every week.** Not in a
+spreadsheet — as a **comment on that week's issue** in the course repository:
 
-| Column | What goes in it |
-|---|---|
-| Name | Yours |
-| Week | 1 to 6 |
-| Designated paper | The one the instructor announced |
-| Repository URL | `https://github.com/user/ai-02-agrawal` |
+> github.com/alexanderquispe/AI-Econ-Modeling/issues
 
-Registering the link is part of the submission: a repository that exists but is not in the spreadsheet counts as not submitted.
+One comment, with the repository URL. That is all:
 
----
+```
+https://github.com/my-user/ai-02-agrawal
+```
+
+You do not need to report the pull request. You do not need to write anything
+else. If you want to add a line about what you found, go ahead — it is read.
+
+**Why a comment and not a spreadsheet.** GitHub stamps every comment with the
+minute it was posted, so the comment *is* the submission record: there is no
+argument to be had about whether something arrived before Tuesday 22:00. It also
+means the register sits next to the assignment instead of in a separate file, and
+that you can see what your classmates built.
+
+Posting the link is part of the submission: a repository that exists but was never
+posted counts as not submitted.
 
 ## 9. How this feeds your grade
 

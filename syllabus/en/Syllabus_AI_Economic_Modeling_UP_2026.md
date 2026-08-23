@@ -144,7 +144,7 @@ It comprises two deliverables: the **average of the six weekly repositories**, w
 
 - **A new GitHub repository for each designated paper.** There are six paper weeks, so by the end of the term each student has **at least six repositories**.
 - **Deadline: Tuesdays at 22:00.** Work follows the branch, *pull request*, and merge cycle covered in the first sessions: nothing is written directly to `main`.
-- **Everyone registers their repository link each week**, whether or not they are drawn in the lottery, in the shared course file. The repository URL suffices. A repository that exists but is not registered counts as not submitted.
+- **Everyone posts their repository link each week**, whether or not they are drawn in the lottery, **as a comment on that week's issue** in the course repository. The URL suffices. GitHub timestamps the comment, so the comment *is* the submission record: a repository that exists but is not posted counts as not submitted.
 - **Minimum contents:** a one-page `README.md` with the agent's problem and the main result with its conditions; a `prompts.md` with the LLM queries and their unedited answers; a `hand/` folder with at least one photograph of a derivation done by hand; and the **Beamer presentation**, with its LaTeX source and its PDF. Above that floor, content is free: extensions, simulations, limiting cases, or whatever the paper suggests.
 
 **On the weekly handwritten derivation.** Students are not asked to derive the whole paper by hand, but to show **at least one place where they did not believe the machine and checked it themselves**: the step the model got wrong, the one they did not understand until they did it, or the one that seemed too easy to be true. A photograph taken with a phone is enough.
@@ -206,7 +206,7 @@ The document is due **on the same date for the whole class**, during the closing
 2. **Verify it.** No result is presented as one's own unless it has been checked by hand or with SymPy. An incorrect step taken from an LLM and presented without verification is graded as the student's own error.
 3. **Adjudicate it.** When the model and the writer disagree, the work must say who is right and why. The final judgment is always the student's.
 
-**Submissions.** Weekly repositories are due **Tuesdays at 22:00**, with the work merged into `main` and the repository link registered in the shared file. Presentations and the final paper are submitted as PDF through GitHub on the stated date. The Beamer deck lives inside that week's repository, with its LaTeX source and its PDF.
+**Submissions.** Weekly repositories are due **Tuesdays at 22:00**, with the work merged into `main` and the repository link posted as a comment on that week's issue. Presentations and the final paper are submitted as PDF through GitHub on the stated date. The Beamer deck lives inside that week's repository, with its LaTeX source and its PDF.
 
 **Attendance.** The reading check is random and taken during the session. The topic presentation and the final presentation have assigned dates and are not rescheduled except with documented justification.
 
