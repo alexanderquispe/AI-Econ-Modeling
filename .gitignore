@@ -4,3 +4,6 @@
 *.out
 *.toc
 *.synctex.gz
+
+# Draw state — local to whoever runs the lottery
+scripts/.sorteo-usados
