@@ -76,6 +76,8 @@ The categories use the nomenclature of the University's grading system.
 
 Every designated paper gets **its own new repository** on GitHub, with `README.md`, `prompts.md`, a `hand/` folder holding at least one photographed derivation, and the Beamer deck. Full detail in the **[repository guide](syllabus/repository-guide.md)**.
 
+📁 **[`ai-01-aouad`](https://github.com/alexanderquispe/ai-01-aouad) is a worked example** set up as a GitHub template — press *Use this template* to start yours with the structure already in place.
+
 ## What is in this repository
 
 ```

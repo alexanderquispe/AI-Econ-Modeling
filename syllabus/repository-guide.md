@@ -33,7 +33,12 @@ When the draw calls on you, you present from that week's repository.
 
 This is the cycle we covered in the first sessions. **Nothing is written directly to `main`.**
 
-1. **Create the repository.** Name it `ai-NN-author`, where `NN` is the week number: `ai-01-aouad`, `ai-02-agrawal`, `ai-03-jovanovic`… Initialise it with a minimal `README.md` on `main`.
+> 📁 **There is a worked example:** [`ai-01-aouad`](https://github.com/alexanderquispe/ai-01-aouad), set up as a GitHub
+> template. Press *Use this template* and you get the whole structure ready —
+> then replace the content with your own. Note that it also contains material
+> **above** the required floor; the four required files are the bar.
+
+1. **Create the repository.** Name it `ai-NN-author`, where `NN` is the week number: `ai-01-aouad`, `ai-02-agrawal`, `ai-03-jovanovic`… Initialise it with a minimal `README.md` on `main`, or start from the template above.
 2. **Create a branch** for your analysis: `git checkout -b analysis`.
 3. **Work on it during the week**, with small, frequent commits. One commit per working session beats one giant commit at the end: the history tells the story of how you thought.
 4. **Open the Pull Request** from `analysis` against `main`. In the PR description, write three lines on what you found.
