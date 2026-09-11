@@ -147,7 +147,7 @@ Se compone de dos entregas: el **promedio de los seis repositorios semanales**, 
 Al inicio de cada sesión del tramo de artículos, **el profesor llama por sorteo a uno o dos estudiantes** para exponer en **5 minutos, con diapositivas en Beamer**, el artículo designado de esa semana.
 
 - El examen oral se aplica en **las doce sesiones** del tramo de artículos, desde la primera (miércoles 19 de agosto): el artículo designado de esa semana se anuncia el viernes 14 de agosto y su repositorio vence el martes 18.
-- El profesor **anuncia el artículo designado en la sesión del viernes anterior**, de modo que haya fin de semana, lunes y martes para trabajarlo.
+- El profesor **anuncia el artículo designado en la sesión del viernes anterior**, de modo que haya fin de semana y de lunes a jueves para trabajarlo.
 - **El nombre de quien expone no se anuncia**: se sortea en clase, de modo que toda la clase llega preparada.
 - El sorteo es **sin reposición**: nadie vuelve a ser llamado hasta que todas y todos hayan pasado al menos una vez.
 - Quien no asiste a la sesión en la que resulta sorteado obtiene cero en esa ronda.
@@ -166,10 +166,10 @@ Al inicio de cada sesión del tramo de artículos, **el profesor llama por sorte
 La exposición oral **no se prepara aparte: se califica sobre el repositorio de esa semana**. Quien expone abre su repositorio y presenta desde ahí; la portada de las diapositivas lleva el enlace.
 
 - **Un repositorio nuevo en GitHub por cada artículo designado.** Son seis semanas de artículos, de modo que al terminar el semestre cada estudiante tiene **al menos seis repositorios**.
-- **Plazo: martes a las 22:00.** El trabajo se hace por el ciclo de rama, *pull request* y fusión visto en las primeras sesiones: nada se escribe directo en `main`. El PR debe estar **fusionado** antes de esa hora, y la hora de fusión es lo que se mira.
+- **Plazo: jueves a las 22:00.** El trabajo se hace por el ciclo de rama, *pull request* y fusión visto en las primeras sesiones: nada se escribe directo en `main`. El PR debe estar **fusionado** antes de esa hora, y la hora de fusión es lo que se mira.
 - **Todas y todos publican el enlace de su repositorio cada semana**, resulten sorteados o no, **como comentario en el issue de esa semana** en el repositorio del curso. Basta la URL. GitHub deja constancia de la hora, de modo que el comentario es el registro de entrega: un repositorio que existe pero no está comentado cuenta como no entregado.
 - **Contenido mínimo:** un `README.md` de una página con el problema del agente y el resultado principal con sus condiciones; un `prompts.md` con las consultas al LLM y sus respuestas sin editar; una carpeta `hand/` con al menos una fotografía de una derivación hecha a mano; y la **presentación en Beamer**, con su fuente LaTeX y su PDF. Por encima de ese piso, el contenido es libre: extensiones, simulaciones, casos límite o lo que el artículo sugiera.
-- **Si el repositorio de esa semana no está entregado y registrado al cierre del martes, el control de lectura se califica con cero**, con independencia de la calidad de la exposición.
+- **Si el repositorio de esa semana no está entregado y registrado al cierre del jueves, el control de lectura se califica con cero**, con independencia de la calidad de la exposición.
 
 **Sobre la derivación a mano.** No se pide derivar el artículo completo, sino que exista **al menos un lugar donde no se le creyó a la máquina y se comprobó a mano**: el paso que el modelo hizo mal, el que no se entendió hasta hacerlo, o el que pareció demasiado fácil para ser cierto. Una fotografía tomada con el teléfono es suficiente; no hay que escanear ni pasar en limpio.
 
@@ -208,7 +208,7 @@ El documento vence **para todo el curso en la misma fecha**, en la semana de cie
 2. **Verificarlo.** No se presenta como propio ningún resultado que no se haya comprobado a mano o con SymPy. Un paso incorrecto tomado de un LLM y presentado sin verificación se califica como error propio.
 3. **Adjudicarlo.** Cuando el modelo y quien escribe discrepan, el trabajo debe decir quién tiene razón y por qué. El juicio final es siempre del estudiante.
 
-**Entregas.** Los repositorios semanales vencen los **martes a las 22:00**, con el trabajo fusionado en `main` y el enlace del repositorio publicado como comentario en el issue de esa semana. Los hitos y el trabajo final se entregan en PDF por GitHub en la fecha indicada. La presentación en Beamer vive dentro del repositorio de esa semana, con su fuente LaTeX y su PDF.
+**Entregas.** Los repositorios semanales vencen los **jueves a las 22:00**, con el trabajo fusionado en `main` y el enlace del repositorio publicado como comentario en el issue de esa semana. Los hitos y el trabajo final se entregan en PDF por GitHub en la fecha indicada. La presentación en Beamer vive dentro del repositorio de esa semana, con su fuente LaTeX y su PDF.
 
 **Asistencia.** El control de lectura es aleatorio y se rinde en la sesión. La exposición del tema y la presentación final tienen fecha asignada y no se reprograman salvo justificación documentada.
 

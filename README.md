@@ -30,7 +30,7 @@ There is no written midterm or final exam. Every student ends the term with a pi
 | Last day of classes | Saturday, **November 21** |
 | Final paper due | **November 23 – 29** |
 
-> ⏰ **Weekly repositories are due Tuesdays at 22:00.** No holiday in the term falls on a Wednesday or a Friday.
+> ⏰ **Weekly repositories are due Thursdays at 22:00.** No holiday in the term falls on a Wednesday or a Friday.
 
 ## Schedule
 
@@ -70,9 +70,9 @@ The categories use the nomenclature of the University's grading system.
 ## How the week works
 
 1. **Friday:** the instructor announces next week's designated paper.
-2. **Weekend and Monday:** read the paper and build the repository.
-3. **Tuesday 22:00:** the repository is due (branch → pull request → merge) and its link posted as a comment on that week's issue.
-4. **Wednesday and Friday:** each session opens with the reading-check draw.
+2. **Weekend to Thursday:** read the paper and build the repository.
+3. **Thursday 22:00:** the repository is due (branch → pull request → merge) and its link posted as a comment on that week's issue.
+4. **Friday:** the draw — students called at random present from that week's repository.
 
 Every designated paper gets **its own new repository** on GitHub, with `README.md`, `prompts.md`, a `hand/` folder holding at least one photographed derivation, and the Beamer deck. Full detail in the **[repository guide](syllabus/repository-guide.md)**.
 

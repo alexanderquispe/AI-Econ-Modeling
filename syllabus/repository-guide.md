@@ -13,7 +13,7 @@ When the draw calls on you, you present from that week's repository.
 | | |
 |---|---|
 | **One repository per designated paper** | Six minimum by the end of the term |
-| **Deadline: Tuesday 22:00** | The pull request must be merged before that hour |
+| **Deadline: Thursday 22:00** | The pull request must be merged before that hour |
 | **Everyone posts their repo link** | As a comment on that week's issue, whether or not you are drawn |
 | **Branch → PR → merge** | Nothing is written directly to `main` |
 
@@ -42,7 +42,7 @@ This is the cycle we covered in the first sessions. **Nothing is written directl
 2. **Create a branch** for your analysis: `git checkout -b analysis`.
 3. **Work on it during the week**, with small, frequent commits. One commit per working session beats one giant commit at the end: the history tells the story of how you thought.
 4. **Open the Pull Request** from `analysis` against `main`. In the PR description, write three lines on what you found.
-5. **Merge the PR** before **Tuesday 22:00**.
+5. **Merge the PR** before **Thursday 22:00**.
 
 The merge time is what counts for the deadline, so do not leave it to the last minute. You only post the repository URL: the pull request need not be reported, but the workflow must still be followed.
 
@@ -162,7 +162,7 @@ else. If you want to add a line about what you found, go ahead — it is read.
 
 **Why a comment and not a spreadsheet.** GitHub stamps every comment with the
 minute it was posted, so the comment *is* the submission record: there is no
-argument to be had about whether something arrived before Tuesday 22:00. It also
+argument to be had about whether something arrived before Thursday 22:00. It also
 means the register sits next to the assignment instead of in a separate file, and
 that you can see what your classmates built.
 
@@ -175,7 +175,7 @@ Your weekly work counts in two categories of the grading system. The **repositor
 
 Classes are online over Zoom: when it is your turn, you share your screen and present your Beamer deck, which already lives inside that week's repository.
 
-**If that week's repository is not merged and registered by the Tuesday deadline, the oral is zero**, however well you speak. Since you do not know which week you will be called, the only strategy is to keep up with all of them.
+**If that week's repository is not merged and registered by the Thursday deadline, the oral is zero**, however well you speak. Since you do not know which week you will be called, the only strategy is to keep up with all of them.
 
 What sits above the minimum floor — the extensions you came up with, the simulations, the dead ends you explored — is what separates a 3-point oral from a 4-point one.
 

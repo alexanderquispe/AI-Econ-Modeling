@@ -143,7 +143,7 @@ It comprises two deliverables: the **average of the six weekly repositories**, w
 #### The weekly repositories (20 %)
 
 - **A new GitHub repository for each designated paper.** There are six paper weeks, so by the end of the term each student has **at least six repositories**.
-- **Deadline: Tuesdays at 22:00.** Work follows the branch, *pull request*, and merge cycle covered in the first sessions: nothing is written directly to `main`.
+- **Deadline: Thursdays at 22:00.** Work follows the branch, *pull request*, and merge cycle covered in the first sessions: nothing is written directly to `main`.
 - **Everyone posts their repository link each week**, whether or not they are drawn in the lottery, **as a comment on that week's issue** in the course repository. The URL suffices. GitHub timestamps the comment, so the comment *is* the submission record: a repository that exists but is not posted counts as not submitted.
 - **Minimum contents:** a one-page `README.md` with the agent's problem and the main result with its conditions; a `prompts.md` with the LLM queries and their unedited answers; a `hand/` folder with at least one photograph of a derivation done by hand; and the **Beamer presentation**, with its LaTeX source and its PDF. Above that floor, content is free: extensions, simulations, limiting cases, or whatever the paper suggests.
 
@@ -162,11 +162,11 @@ The presentation is accompanied by a two-page document stating the first-order c
 At the start of each session in the paper block, **the instructor draws one or two students by lottery** to present in **5 minutes**, sharing screen, the contents of their repository for that week.
 
 - It applies in **all twelve sessions** of the paper block, starting with the first (Wednesday, August 19): that week's designated paper is announced on Friday, August 14, and its repository is due on Tuesday, August 18.
-- The instructor **announces the designated paper in the previous Friday's session**, so that there is a weekend, Monday, and Tuesday to work on it.
+- The instructor **announces the designated paper in the previous Friday's session**, so that there is a weekend plus Monday through Thursday to work on it.
 - **The name of the presenter is not announced**: it is drawn during the session, so the whole class arrives prepared.
 - The draw is **without replacement**: nobody is called again until everyone has presented at least once.
 - A student who misses the session in which they are drawn receives a zero for that round.
-- **If that week's repository is not submitted and registered by the Tuesday deadline, the reading check is graded zero**, regardless of the quality of the presentation.
+- **If that week's repository is not submitted and registered by the Thursday deadline, the reading check is graded zero**, regardless of the quality of the presentation.
 
 **The presentation is a Beamer deck that lives inside the repository** and shows what that repository contains and what was achieved with it. Required structure: a title slide with the repository link, plus four slides.
 
@@ -206,7 +206,7 @@ The document is due **on the same date for the whole class**, during the closing
 2. **Verify it.** No result is presented as one's own unless it has been checked by hand or with SymPy. An incorrect step taken from an LLM and presented without verification is graded as the student's own error.
 3. **Adjudicate it.** When the model and the writer disagree, the work must say who is right and why. The final judgment is always the student's.
 
-**Submissions.** Weekly repositories are due **Tuesdays at 22:00**, with the work merged into `main` and the repository link posted as a comment on that week's issue. Presentations and the final paper are submitted as PDF through GitHub on the stated date. The Beamer deck lives inside that week's repository, with its LaTeX source and its PDF.
+**Submissions.** Weekly repositories are due **Thursdays at 22:00**, with the work merged into `main` and the repository link posted as a comment on that week's issue. Presentations and the final paper are submitted as PDF through GitHub on the stated date. The Beamer deck lives inside that week's repository, with its LaTeX source and its PDF.
 
 **Attendance.** The reading check is random and taken during the session. The topic presentation and the final presentation have assigned dates and are not rescheduled except with documented justification.
 
