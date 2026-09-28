@@ -60,11 +60,6 @@ The script reads a local roster that is **not** in this repository — the enrol
 list is your personal data and a public repo is no place for it. Publishing the
 seed is what makes the draw checkable without publishing the list.
 
-## If you cannot make your slot
-
-Session 26 (Fri Nov 20) is held free as a make-up slot. Write to the instructor
-**before** your scheduled date, not after.
-
 ## Where this comes from
 
 Dates follow the [course schedule](README.md#schedule): topic presentations in
