@@ -11,3 +11,6 @@ scripts/.sorteo-usados
 # The real roster and the name list: personal data, never in a public repository
 scripts/roster.txt
 scripts/nombres.txt
+
+# Grades and grading notes: personal data, never in a public repository
+grading/
