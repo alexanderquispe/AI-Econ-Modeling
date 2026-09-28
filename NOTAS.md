@@ -8,7 +8,7 @@ Escala 0–20. Cómo se evaluó, qué se penalizó y dónde se perdieron más pu
 | Estudiante | R2 Agrawal | R3 Quispe | R4 Acemoglu | R5 Ide | R6 Restrepo | Promedio repos | **Promedio con curva (+2)** | **Control de lectura (oral)** |
 |---|---|---|---|---|---|---|---|---|
 | Arriola Montenegro, Manuel Alfredo | 18 | 18 | 15 | 17 | 18 | 17.2 | **19.2** | **18** |
-| Barraza Ratachi, John Svante | 15 | 13 | 10 | 14 | 16 | 13.6 | **15.6** | **11** |
+| Barraza Ratachi, John Svante | 15 | 13 | 10 | 14 | 16 | 13.6 | **15.6** | **14** |
 | Chávez Unyen, Alvaro Marcelo | 19 | 18 | 17 | 12 | 12 | 15.6 | **17.6** | **17** |
 | Espinoza Huallpa, Yanira Maritza | 0 | 0 | 0 | 0 | 0 | 0.0 | **0.0** | **0** |
 | Galarza Chumbe, Fabián Matías | 15 | 4 | 15 | 10 | 15 | 11.8 | **13.8** | **0** |
