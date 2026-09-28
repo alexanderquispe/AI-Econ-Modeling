@@ -8,5 +8,6 @@
 # Draw state — local to whoever runs the lottery
 scripts/.sorteo-usados
 
-# The real roster: personal data, never in a public repository
+# The real roster and the name list: personal data, never in a public repository
 scripts/roster.txt
+scripts/nombres.txt

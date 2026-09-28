@@ -32,6 +32,8 @@ There is no written midterm or final exam. Every student ends the term with a pi
 
 > ⏰ **Weekly repositories are due Thursdays at 22:00.** No holiday in the term falls on a Wednesday or a Friday.
 
+> 🎤 **[Who presents and when](PRESENTATIONS.md)** — the drawn order for the topic and final presentations. One draw fixes both rounds.
+
 ## Schedule
 
 | # | Date | Topic | Assessment |
