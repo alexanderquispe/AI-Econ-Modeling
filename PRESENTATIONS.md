@@ -44,8 +44,9 @@ Times below include the slot's question period; be ready five minutes early.
 | 25 | Wed Nov 18 | 07:30–08:15 | Yanira Maritza Espinoza Huallpa |
 | 26 | Fri Nov 20 | — | *free — reserved for make-ups* |
 
-The two-page document with the first-order condition you expect to obtain is due
-with the topic presentation, as stated in the syllabus.
+What must be merged before each presentation is in the [project issue](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7):
+the topic document (2–4 pages) and the slides are due at **22:00 the evening
+before your slot**, and the final paper on Thursday, November 26, 22:00.
 
 ## How the order was drawn
 

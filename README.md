@@ -28,11 +28,13 @@ There is no written midterm or final exam. Every student ends the term with a pi
 | Workshop | October 21 and 23 (sessions 17–18) |
 | Final presentations | **October 28 – November 20** (sessions 19–26) |
 | Last day of classes | Saturday, **November 21** |
-| Final paper due | **November 23 – 29** |
+| Final paper due | **Thursday, November 26, 22:00** — the same date for everyone |
 
 > ⏰ **Weekly repositories are due Thursdays at 22:00.** No holiday in the term falls on a Wednesday or a Friday.
 
 > 🎤 **[Who presents and when](PRESENTATIONS.md)** — the drawn order for the topic and final presentations. One draw fixes both rounds.
+
+> 📌 **[Term project: what to submit and when](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7)** — the topic presentation, the final presentation and the final paper live in one repository, built from the **[project template](https://github.com/alexanderquispe/ai-project-template)**.
 
 ## Schedule
 
@@ -56,7 +58,7 @@ There is no written midterm or final exam. Every student ends the term with a pi
 | 13–16 | Oct 7 – 16 | Topic presentations · four per session, 20 min each | Topic pres. |
 | 17–18 | Oct 21 and 23 | Workshop on the student's own project | |
 | 19–26 | Oct 28 – Nov 20 | Final presentations · two per session | Final pres. |
-| — | Nov 23–29 | Close of term | Final paper |
+| — | Thu Nov 26, 22:00 | Final paper due · close of term Nov 23–29 | Final paper |
 
 ## Assessment
 
@@ -64,7 +66,7 @@ The categories use the nomenclature of the University's grading system.
 
 | Category | What it covers | Weight |
 |---|---|---|
-| **Final paper** | A 6–8 page document plus a handwritten appendix | 30 % |
+| **Final paper** | An 8–20 page paper in LaTeX, with its Lean formalization and a handwritten appendix | 30 % |
 | **Final presentation** | Presentation of the work, Oct 28 – Nov 20 | 30 % |
 | **Coursework average** | The six weekly repositories (20) and the topic presentation (10) | 30 % |
 | **Reading check** | Five-minute oral exam, by lottery | 10 % |
