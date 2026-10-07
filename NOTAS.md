@@ -25,4 +25,7 @@ Escala 0–20. Cómo se evaluó, qué se penalizó y dónde se perdieron más pu
 - **Control de lectura:** ya incluye la curva de +3 (salvo quienes tienen 0) y el ajuste de +5 a quienes expusieron el 26 de agosto con solo 5–10 minutos.
 - Un 0 en un repositorio significa que no hubo entrega registrada ni trabajo recuperable en GitHub para ese paper.
 
+Las notas de la exposición de tema, la presentación final y las participaciones están en
+[NOTAS-PRESENTACIONES.md](NOTAS-PRESENTACIONES.md).
+
 ¿Dudas sobre tu nota? Escribe al profesor indicando el repositorio y el criterio de la rúbrica.
